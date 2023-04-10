@@ -1,0 +1,2018 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.26)  24 FEB 2023 21:47
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**cover.tex
+(./cover.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+! Undefined control sequence.
+l.38 \ctitle
+            {槽道湍流带的稳定性和瞬态特性的数值模拟研究}  %封面用论文标题，自己可手动断行
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \ctitle{槽
+              道湍流带的稳定性和瞬态特性的数值模拟研究}  %封面用论文标题，自己可手动断行
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 槽 ("69FD) in font nullfont!
+Missing character: There is no 道 ("9053) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 稳 ("7A33) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 性 ("6027) in font nullfont!
+Missing character: There is no 和 ("548C) in font nullfont!
+Missing character: There is no 瞬 ("77AC) in font nullfont!
+Missing character: There is no 态 ("6001) in font nullfont!
+Missing character: There is no 特 ("7279) in font nullfont!
+Missing character: There is no 性 ("6027) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no 模 ("6A21) in font nullfont!
+Missing character: There is no 拟 ("62DF) in font nullfont!
+Missing character: There is no 研 ("7814) in font nullfont!
+Missing character: There is no 究 ("7A76) in font nullfont!
+! Undefined control sequence.
+l.39 \etitle
+            {numerical study on stability and transient characteristics of  ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no m ("6D) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no b ("62) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no b ("62) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no b ("62) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+! Undefined control sequence.
+l.40 \cfirstsubjecttitle
+                        {\textbf{一级学科}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 一 (U+4E00) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 级 (U+7EA7) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 学 (U+5B66) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 科 (U+79D1) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.41 \cfirstsubject
+                   {\textbf{\underline{\makebox[14em][c]{信息与通信工程}}}}   %专业
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 41.
+Missing character: There is no 信 (U+4FE1) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 息 (U+606F) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 与 (U+4E0E) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 通 (U+901A) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 信 (U+4FE1) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 工 (U+5DE5) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 程 (U+7A0B) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.42 \csubjecttitle
+                   {\textbf{研究方向}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 研 (U+7814) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 究 (U+7A76) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 方 (U+65B9) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 向 (U+5411) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.43 \csubject
+              {\textbf{\underline{\makebox[14em][c]{数学}}}}   %专业
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 数 (U+6570) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 学 (U+5B66) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.44 \cauthortitle
+                  {\textbf{作者姓名}}     % 学位
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 作 (U+4F5C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 者 (U+8005) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 姓 (U+59D3) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 名 (U+540D) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.45 \cauthor
+             {\textbf{\underline{\makebox[14em][c]{伍昊洋}}}}   %学生姓名
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 伍 (U+4F0D) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 昊 (U+660A) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 洋 (U+6D0B) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.46 \csupervisortitle
+                      {\textbf{指导教师}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 指 (U+6307) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 导 (U+5BFC) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 教 (U+6559) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 师 (U+5E08) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.47 \csupervisor
+                 {\textbf{\underline{\makebox[14em][c]{宋保方}}}} %导师姓名
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 宋 (U+5B8B) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 保 (U+4FDD) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 方 (U+65B9) in font [lmroman10-bold]:mapping=tex-
+text;!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--48
+[]
+ []
+
+
+Overfull \hbox (11.2pt too wide) in paragraph at lines 38--48
+\TU/lmr/bx/n/10 一级学科
+ []
+
+
+Overfull \hbox (140.0pt too wide) in paragraph at lines 38--48
+[]$
+ []
+
+
+Overfull \hbox (11.2pt too wide) in paragraph at lines 38--48
+\TU/lmr/bx/n/10 研究方向
+ []
+
+
+Overfull \hbox (140.0pt too wide) in paragraph at lines 38--48
+[]$
+ []
+
+
+Overfull \hbox (11.2pt too wide) in paragraph at lines 38--48
+\TU/lmr/bx/n/10 作者姓名
+ []
+
+
+Overfull \hbox (140.0pt too wide) in paragraph at lines 38--48
+[]$
+ []
+
+
+Overfull \hbox (11.2pt too wide) in paragraph at lines 38--48
+\TU/lmr/bx/n/10 指导教师
+ []
+
+
+Overfull \hbox (140.0pt too wide) in paragraph at lines 38--48
+[]$ 
+ []
+
+! Undefined control sequence.
+l.49 \teachertable
+                  {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment table undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \begin{table}
+                  [h]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \begin{table}[
+                   h]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ ("5B) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no ] ("5D) in font nullfont!
+! Undefined control sequence.
+l.53 \song
+          \xiaosi{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 \song\xiaosi
+                 {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment tabularx undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \begin{tabularx}
+                     {\textwidth}{|*{4}{>{\centering\arraybackslash}X|}}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.54 \begin{tabularx}{\textwidth}
+                                 {|*{4}{>{\centering\arraybackslash}X|}}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.54 \begin{tabularx}{\textwidth}
+                                 {|*{4}{>{\centering\arraybackslash}X|}}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no | ("7C) in font nullfont!
+Missing character: There is no * ("2A) in font nullfont!
+Missing character: There is no 4 ("34) in font nullfont!
+Missing character: There is no > ("3E) in font nullfont!
+! Undefined control sequence.
+l.54 ...xtwidth}{|*{4}{>{\centering\arraybackslash
+                                                  }X|}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no X ("58) in font nullfont!
+Missing character: There is no | ("7C) in font nullfont!
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.55 \hline
+           
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 50--55
+ [] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \textbf{答辩日期}
+                                  & \multicolumn{3}{c|}{20   年   月   日}     ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 答 (U+7B54) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 辩 (U+8FA9) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 日 (U+65E5) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 期 (U+671F) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Misplaced alignment tab character &.
+l.56 \textbf{答辩日期}                &
+                                    \multicolumn{3}{c|}{20   年   月   日}     ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@classi ->\ifcase \@lastchclass \@acol 
+                                        \@arrayrule \or \@addtopreamble {\hs...
+l.56 ...     & \multicolumn{3}{c|}{20   年   月   日}
+                                                         \\ \hline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (11.2pt too wide) in paragraph at lines 56--56
+ []\TU/lmr/bx/n/10 答辩日期 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.56 ...umn{3}{c|}{20   年   月   日}       \\ \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \textbf{答辩委员会}
+                                  & \textbf{姓名} & \textbf{职称} & \textbf{工作单位...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 答 (U+7B54) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 辩 (U+8FA9) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 委 (U+59D4) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 员 (U+5458) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 会 (U+4F1A) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Misplaced alignment tab character &.
+l.57 \textbf{答辩委员会}               &
+                                    \textbf{姓名} & \textbf{职称} & \textbf{工作单位...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 姓 (U+59D3) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 名 (U+540D) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Misplaced alignment tab character &.
+l.57 \textbf{答辩委员会}               & \textbf{姓名} &
+                                                  \textbf{职称} & \textbf{工作单位...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 职 (U+804C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 称 (U+79F0) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Misplaced alignment tab character &.
+l.57 ...             & \textbf{姓名} & \textbf{职称} &
+                                                   \textbf{工作单位} \\ \hline
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 工 (U+5DE5) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 作 (U+4F5C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 单 (U+5355) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 位 (U+4F4D) in font [lmroman10-bold]:mapping=tex-
+text;!
+
+Overfull \hbox (14.0pt too wide) in paragraph at lines 57--57
+ []\TU/lmr/bx/n/10 答辩委员会 
+ []
+
+
+Overfull \hbox (5.6pt too wide) in paragraph at lines 57--57
+ \TU/lmr/bx/n/10 姓名 
+ []
+
+
+Overfull \hbox (5.6pt too wide) in paragraph at lines 57--57
+ \TU/lmr/bx/n/10 职称 
+ []
+
+
+Overfull \hbox (11.2pt too wide) in paragraph at lines 57--57
+ \TU/lmr/bx/n/10 工作单位 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.57 ...名} & \textbf{职称} & \textbf{工作单位} \\ \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \textbf{主席}
+                                  &             &             &             ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 主 (U+4E3B) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 席 (U+5E2D) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Misplaced alignment tab character &.
+l.58 \textbf{主席}                  &
+                                                &             &             ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.58 \textbf{主席}                  &             &
+                                                              &             ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.58 ...             &             &             &
+                                                                 \\ \hline
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (5.6pt too wide) in paragraph at lines 58--58
+ []\TU/lmr/bx/n/10 主席 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.58 ...   &             &               \\ \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Undefined control sequence.
+<recently read> \multirow 
+                          
+l.59 \multirow
+              {2}{*}{\textbf{委员}} &             &             &             ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 \multirow{2
+                }{*}{\textbf{委员}} &             &             &             ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no * ("2A) in font nullfont!
+Missing character: There is no 委 (U+59D4) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 员 (U+5458) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Misplaced alignment tab character &.
+l.59 \multirow{2}{*}{\textbf{委员}} &
+                                                &             &             ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.59 \multirow{2}{*}{\textbf{委员}} &             &
+                                                              &             ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.59 ...\textbf{委员}} &             &             &
+                                                                 \\ \cline{2-4}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (5.6pt too wide) in paragraph at lines 59--59
+ []\TU/lmr/bx/n/10 委员 
+ []
+
+! Misplaced \omit.
+\@cline #1-#2\@nil ->\omit 
+                           \@multicnt #1\advance \@multispan \m@ne \ifnum \@...
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+<argument> &
+            \omit 
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+<argument> &\omit 
+                  
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Leaders not followed by proper glue.
+<to be read again> 
+                   \hfill 
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+You should say `\leaders <box or rule><hskip or vskip>'.
+I found the <box or rule>, but there's no suitable
+<hskip or vskip>, so I'm ignoring these leaders.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Misplaced \cr.
+\@cline ...le \@height \arrayrulewidth \hfill \cr 
+                                                  \noalign {\vskip -\arrayru...
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\@cline ...ht \arrayrulewidth \hfill \cr \noalign 
+                                                  {\vskip -\arrayrulewidth }
+l.59 ...            &               \\ \cline{2-4}
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.60                              &
+                                                &             &             ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.60                              &             &
+                                                              &             ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.60 ...             &             &             &
+                                                                 \\ \hline
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 ...          &             &               \\
+                                                   \hline
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.60 ...   &             &               \\ \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+! LaTeX Error: \begin{document} ended by \end{tabularx}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \end{tabularx}
+                   }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{table}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \end{table}
+                }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.64 \caffil
+            {天津大学数学学院} %学院名称
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \caffil{天
+              津大学数学学院} %学院名称
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 天 ("5929) in font nullfont!
+Missing character: There is no 津 ("6D25) in font nullfont!
+Missing character: There is no 大 ("5927) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 院 ("9662) in font nullfont!
+! Undefined control sequence.
+l.65 \cdate
+           {\CJKdigits{\the\year} 年\CJKnumber{\the\month} 月 \CJKnumber{\the\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.65 \cdate{\CJKdigits
+                      {\the\year} 年\CJKnumber{\the\month} 月 \CJKnumber{\the\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no 3 ("33) in font nullfont!
+Missing character: There is no 年 ("5E74) in font nullfont!
+! Undefined control sequence.
+l.65 \cdate{\CJKdigits{\the\year} 年\CJKnumber
+                                             {\the\month} 月 \CJKnumber{\the\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no 月 ("6708) in font nullfont!
+! Undefined control sequence.
+l.65 ...year} 年\CJKnumber{\the\month} 月 \CJKnumber
+                                                  {\the\day} 日}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no 4 ("34) in font nullfont!
+Missing character: There is no 日 ("65E5) in font nullfont!
+! Undefined control sequence.
+l.67 \cdate
+           {二〇二一年九月}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 二 ("4E8C) in font nullfont!
+Missing character: There is no 〇 ("3007) in font nullfont!
+Missing character: There is no 二 ("4E8C) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 年 ("5E74) in font nullfont!
+Missing character: There is no 九 ("4E5D) in font nullfont!
+Missing character: There is no 月 ("6708) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 64--69
+[]
+ []
+
+! Undefined control sequence.
+l.71 \declaretitle
+                  {独创性声明}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \declaretitle{独
+                    创性声明}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 独 ("72EC) in font nullfont!
+Missing character: There is no 创 ("521B) in font nullfont!
+Missing character: There is no 性 ("6027) in font nullfont!
+Missing character: There is no 声 ("58F0) in font nullfont!
+Missing character: There is no 明 ("660E) in font nullfont!
+! Undefined control sequence.
+l.72 \declarecontent
+                    {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 人 ("4EBA) in font nullfont!
+Missing character: There is no 声 ("58F0) in font nullfont!
+Missing character: There is no 明 ("660E) in font nullfont!
+Missing character: There is no 所 ("6240) in font nullfont!
+Missing character: There is no 呈 ("5448) in font nullfont!
+Missing character: There is no 交 ("4EA4) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 人 ("4EBA) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 师 ("5E08) in font nullfont!
+Missing character: There is no 指 ("6307) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 下 ("4E0B) in font nullfont!
+Missing character: There is no 进 ("8FDB) in font nullfont!
+Missing character: There is no 行 ("884C) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 研 ("7814) in font nullfont!
+Missing character: There is no 究 ("7A76) in font nullfont!
+Missing character: There is no 工 ("5DE5) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no 和 ("548C) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 得 ("5F97) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 研 ("7814) in font nullfont!
+Missing character: There is no 究 ("7A76) in font nullfont!
+Missing character: There is no 成 ("6210) in font nullfont!
+Missing character: There is no 果 ("679C) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 除 ("9664) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 特 ("7279) in font nullfont!
+Missing character: There is no 别 ("522B) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 标 ("6807) in font nullfont!
+Missing character: There is no 注 ("6CE8) in font nullfont!
+Missing character: There is no 和 ("548C) in font nullfont!
+Missing character: There is no 致 ("81F4) in font nullfont!
+Missing character: There is no 谢 ("8C22) in font nullfont!
+Missing character: There is no 之 ("4E4B) in font nullfont!
+Missing character: There is no 处 ("5904) in font nullfont!
+Missing character: There is no 外 ("5916) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 包 ("5305) in font nullfont!
+Missing character: There is no 含 ("542B) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 他 ("4ED6) in font nullfont!
+Missing character: There is no 人 ("4EBA) in font nullfont!
+Missing character: There is no 已 ("5DF2) in font nullfont!
+Missing character: There is no 经 ("7ECF) in font nullfont!
+Missing character: There is no 发 ("53D1) in font nullfont!
+Missing character: There is no 表 ("8868) in font nullfont!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 撰 ("64B0) in font nullfont!
+Missing character: There is no 写 ("5199) in font nullfont!
+Missing character: There is no 过 ("8FC7) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 研 ("7814) in font nullfont!
+Missing character: There is no 究 ("7A76) in font nullfont!
+Missing character: There is no 成 ("6210) in font nullfont!
+Missing character: There is no 果 ("679C) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 也 ("4E5F) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 包 ("5305) in font nullfont!
+Missing character: There is no 含 ("542B) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 获 ("83B7) in font nullfont!
+Missing character: There is no 得 ("5F97) in font nullfont!
+! Undefined control sequence.
+<argument> \kaiGB 
+                  {\sihao {\textbf {~~天津大学~~}}}
+l.73 ...derline{\kaiGB{\sihao{\textbf{~~天津大学~~}}}}
+                                                  } 或其他教育机构的学位或证书而使用过的材料。与我一...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \kaiGB {\sihao 
+                          {\textbf {~~天津大学~~}}}
+l.73 ...derline{\kaiGB{\sihao{\textbf{~~天津大学~~}}}}
+                                                  } 或其他教育机构的学位或证书而使用过的材料。与我一...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 天 (U+5929) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 津 (U+6D25) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 大 (U+5927) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 学 (U+5B66) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 他 ("4ED6) in font nullfont!
+Missing character: There is no 教 ("6559) in font nullfont!
+Missing character: There is no 育 ("80B2) in font nullfont!
+Missing character: There is no 机 ("673A) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 证 ("8BC1) in font nullfont!
+Missing character: There is no 书 ("4E66) in font nullfont!
+Missing character: There is no 而 ("800C) in font nullfont!
+Missing character: There is no 使 ("4F7F) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 过 ("8FC7) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 材 ("6750) in font nullfont!
+Missing character: There is no 料 ("6599) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 与 ("4E0E) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 工 ("5DE5) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 志 ("5FD7) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 研 ("7814) in font nullfont!
+Missing character: There is no 究 ("7A76) in font nullfont!
+Missing character: There is no 所 ("6240) in font nullfont!
+Missing character: There is no 做 ("505A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 任 ("4EFB) in font nullfont!
+Missing character: There is no 何 ("4F55) in font nullfont!
+Missing character: There is no 贡 ("8D21) in font nullfont!
+Missing character: There is no 献 ("732E) in font nullfont!
+Missing character: There is no 均 ("5747) in font nullfont!
+Missing character: There is no 已 ("5DF2) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 明 ("660E) in font nullfont!
+Missing character: There is no 确 ("786E) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 说 ("8BF4) in font nullfont!
+Missing character: There is no 明 ("660E) in font nullfont!
+Missing character: There is no 并 ("5E76) in font nullfont!
+Missing character: There is no 表 ("8868) in font nullfont!
+Missing character: There is no 示 ("793A) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 谢 ("8C22) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+! Undefined control sequence.
+l.75 \authorizationtitle
+                        {学位论文版权使用授权书}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 版 ("7248) in font nullfont!
+Missing character: There is no 权 ("6743) in font nullfont!
+Missing character: There is no 使 ("4F7F) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 授 ("6388) in font nullfont!
+Missing character: There is no 权 ("6743) in font nullfont!
+Missing character: There is no 书 ("4E66) in font nullfont!
+! Undefined control sequence.
+l.76 \authorizationcontent
+                          {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no 者 ("8005) in font nullfont!
+Missing character: There is no 完 ("5B8C) in font nullfont!
+Missing character: There is no 全 ("5168) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 解 ("89E3) in font nullfont!
+! Undefined control sequence.
+<argument> \kaiGB 
+                  {\sihao {\textbf {~~天津大学~~}}}
+l.77 ...derline{\kaiGB{\sihao{\textbf{~~天津大学~~}}}}
+                                                  }有关保留、使用学位论文的规定。特授权{\under...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \kaiGB {\sihao 
+                          {\textbf {~~天津大学~~}}}
+l.77 ...derline{\kaiGB{\sihao{\textbf{~~天津大学~~}}}}
+                                                  }有关保留、使用学位论文的规定。特授权{\under...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 天 (U+5929) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 津 (U+6D25) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 大 (U+5927) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 学 (U+5B66) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 关 ("5173) in font nullfont!
+Missing character: There is no 保 ("4FDD) in font nullfont!
+Missing character: There is no 留 ("7559) in font nullfont!
+Missing character: There is no 、 ("3001) in font nullfont!
+Missing character: There is no 使 ("4F7F) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 规 ("89C4) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 特 ("7279) in font nullfont!
+Missing character: There is no 授 ("6388) in font nullfont!
+Missing character: There is no 权 ("6743) in font nullfont!
+! Undefined control sequence.
+<argument> \kaiGB 
+                  {\sihao {\textbf {~~天津大学~~}}}
+l.77 ...derline{\kaiGB{\sihao{\textbf{~~天津大学~~}}}}
+                                                  } 可以将学位论文的全部或部分内容编入有关数据库进行...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \kaiGB {\sihao 
+                          {\textbf {~~天津大学~~}}}
+l.77 ...derline{\kaiGB{\sihao{\textbf{~~天津大学~~}}}}
+                                                  } 可以将学位论文的全部或部分内容编入有关数据库进行...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 天 (U+5929) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 津 (U+6D25) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 大 (U+5927) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 学 (U+5B66) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 将 ("5C06) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 全 ("5168) in font nullfont!
+Missing character: There is no 部 ("90E8) in font nullfont!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 部 ("90E8) in font nullfont!
+Missing character: There is no 分 ("5206) in font nullfont!
+Missing character: There is no 内 ("5185) in font nullfont!
+Missing character: There is no 容 ("5BB9) in font nullfont!
+Missing character: There is no 编 ("7F16) in font nullfont!
+Missing character: There is no 入 ("5165) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 关 ("5173) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 据 ("636E) in font nullfont!
+Missing character: There is no 库 ("5E93) in font nullfont!
+Missing character: There is no 进 ("8FDB) in font nullfont!
+Missing character: There is no 行 ("884C) in font nullfont!
+Missing character: There is no 检 ("68C0) in font nullfont!
+Missing character: There is no 索 ("7D22) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 并 ("5E76) in font nullfont!
+Missing character: There is no 采 ("91C7) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 影 ("5F71) in font nullfont!
+Missing character: There is no 印 ("5370) in font nullfont!
+Missing character: There is no 、 ("3001) in font nullfont!
+Missing character: There is no 缩 ("7F29) in font nullfont!
+Missing character: There is no 印 ("5370) in font nullfont!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 扫 ("626B) in font nullfont!
+Missing character: There is no 描 ("63CF) in font nullfont!
+Missing character: There is no 等 ("7B49) in font nullfont!
+Missing character: There is no 复 ("590D) in font nullfont!
+Missing character: There is no 制 ("5236) in font nullfont!
+Missing character: There is no 手 ("624B) in font nullfont!
+Missing character: There is no 段 ("6BB5) in font nullfont!
+Missing character: There is no 保 ("4FDD) in font nullfont!
+Missing character: There is no 存 ("5B58) in font nullfont!
+Missing character: There is no 、 ("3001) in font nullfont!
+Missing character: There is no 汇 ("6C47) in font nullfont!
+Missing character: There is no 编 ("7F16) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 供 ("4F9B) in font nullfont!
+Missing character: There is no 查 ("67E5) in font nullfont!
+Missing character: There is no 阅 ("9605) in font nullfont!
+Missing character: There is no 和 ("548C) in font nullfont!
+Missing character: There is no 借 ("501F) in font nullfont!
+Missing character: There is no 阅 ("9605) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 校 ("6821) in font nullfont!
+Missing character: There is no 向 ("5411) in font nullfont!
+Missing character: There is no 国 ("56FD) in font nullfont!
+Missing character: There is no 家 ("5BB6) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 关 ("5173) in font nullfont!
+Missing character: There is no 部 ("90E8) in font nullfont!
+Missing character: There is no 门 ("95E8) in font nullfont!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 机 ("673A) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 送 ("9001) in font nullfont!
+Missing character: There is no 交 ("4EA4) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 复 ("590D) in font nullfont!
+Missing character: There is no 印 ("5370) in font nullfont!
+Missing character: There is no 件 ("4EF6) in font nullfont!
+Missing character: There is no 和 ("548C) in font nullfont!
+Missing character: There is no 磁 ("78C1) in font nullfont!
+Missing character: There is no 盘 ("76D8) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+! Undefined control sequence.
+l.79 \authorizationadd
+                      {(保密的学位论文在解密后适用本授权说明)}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ( ("28) in font nullfont!
+Missing character: There is no 保 ("4FDD) in font nullfont!
+Missing character: There is no 密 ("5BC6) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 解 ("89E3) in font nullfont!
+Missing character: There is no 密 ("5BC6) in font nullfont!
+Missing character: There is no 后 ("540E) in font nullfont!
+Missing character: There is no 适 ("9002) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 授 ("6388) in font nullfont!
+Missing character: There is no 权 ("6743) in font nullfont!
+Missing character: There is no 说 ("8BF4) in font nullfont!
+Missing character: There is no 明 ("660E) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+! Undefined control sequence.
+l.80 \authorsigncap
+                   {学位论文作者签名:}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 学 ("5B66) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 文 ("6587) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no 者 ("8005) in font nullfont!
+Missing character: There is no 签 ("7B7E) in font nullfont!
+Missing character: There is no 名 ("540D) in font nullfont!
+Missing character: There is no : ("3A) in font nullfont!
+! Undefined control sequence.
+l.81 \supervisorsigncap
+                       {导师签名:}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 师 ("5E08) in font nullfont!
+Missing character: There is no 签 ("7B7E) in font nullfont!
+Missing character: There is no 名 ("540D) in font nullfont!
+Missing character: There is no : ("3A) in font nullfont!
+! Undefined control sequence.
+l.82 \signdatecap
+                 {签字日期:}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 签 ("7B7E) in font nullfont!
+Missing character: There is no 字 ("5B57) in font nullfont!
+Missing character: There is no 日 ("65E5) in font nullfont!
+Missing character: There is no 期 ("671F) in font nullfont!
+Missing character: There is no : ("3A) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 71--83
+[]
+ []
+
+
+Overfull \hbox (26.52pt too wide) in paragraph at lines 71--83
+[]$
+ []
+
+
+Overfull \hbox (53.04001pt too wide) in paragraph at lines 71--83
+[]$$[]$
+ []
+
+! Undefined control sequence.
+l.84 \cabstract
+               {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 湍
+      流的转捩过程是研究湍流形成的一个重要角度。在转捩雷诺数下，槽道流动形成的湍流会以局部湍流带的形式存在。湍流带的成因、
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 转 ("8F6C) in font nullfont!
+Missing character: There is no 捩 ("6369) in font nullfont!
+Missing character: There is no 过 ("8FC7) in font nullfont!
+Missing character: There is no 程 ("7A0B) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 研 ("7814) in font nullfont!
+Missing character: There is no 究 ("7A76) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 形 ("5F62) in font nullfont!
+Missing character: There is no 成 ("6210) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 重 ("91CD) in font nullfont!
+Missing character: There is no 要 ("8981) in font nullfont!
+Missing character: There is no 角 ("89D2) in font nullfont!
+Missing character: There is no 度 ("5EA6) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 转 ("8F6C) in font nullfont!
+Missing character: There is no 捩 ("6369) in font nullfont!
+Missing character: There is no 雷 ("96F7) in font nullfont!
+Missing character: There is no 诺 ("8BFA) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 下 ("4E0B) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 槽 ("69FD) in font nullfont!
+Missing character: There is no 道 ("9053) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 动 ("52A8) in font nullfont!
+Missing character: There is no 形 ("5F62) in font nullfont!
+Missing character: There is no 成 ("6210) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 会 ("4F1A) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 局 ("5C40) in font nullfont!
+Missing character: There is no 部 ("90E8) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 形 ("5F62) in font nullfont!
+Missing character: There is no 式 ("5F0F) in font nullfont!
+Missing character: There is no 存 ("5B58) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 成 ("6210) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no 、 ("3001) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 85--86
+[] 
+ []
+
+! Undefined control sequence.
+l.90 \ckeywords
+               {湍流转捩，边壁效应，湍流带，寿命预测，湍流带}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 \ckeywords{湍
+                 流转捩，边壁效应，湍流带，寿命预测，湍流带}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 转 ("8F6C) in font nullfont!
+Missing character: There is no 捩 ("6369) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 边 ("8FB9) in font nullfont!
+Missing character: There is no 壁 ("58C1) in font nullfont!
+Missing character: There is no 效 ("6548) in font nullfont!
+Missing character: There is no 应 ("5E94) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 寿 ("5BFF) in font nullfont!
+Missing character: There is no 命 ("547D) in font nullfont!
+Missing character: There is no 预 ("9884) in font nullfont!
+Missing character: There is no 测 ("6D4B) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 湍 ("6E4D) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--91
+[] 
+ []
+
+! Undefined control sequence.
+l.92 \eabstract
+               {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 T
+      he eight screens are part of the traditional comic dialogue. The eight...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no T ("54) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no p ("70) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no m ("6D) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no T ("54) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no p ("70) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no m ("6D) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no T ("54) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no p ("70) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no m ("6D) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+Missing character: There is no T ("54) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no p ("70) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no f ("66) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no t ("74) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no n ("6E) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no m ("6D) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no i ("69) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 94--95
+[]
+ []
+
+! Undefined control sequence.
+l.98 \ekeywords
+               {Keyword, Keyword, Keyword, Keyword, Keyword}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \ekeywords{K
+                 eyword, Keyword, Keyword, Keyword, Keyword}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no K ("4B) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no w ("77) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no K ("4B) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no w ("77) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no K ("4B) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no w ("77) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no K ("4B) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no w ("77) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no K ("4B) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no y ("79) in font nullfont!
+Missing character: There is no w ("77) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 98--99
+[]
+ []
+
+! Undefined control sequence.
+l.100 \makecover
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 \clearpage
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1])
+! Emergency stop.
+<*> cover.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 30 strings out of 477693
+ 536 string characters out of 5831692
+ 294032 words of memory out of 5000000
+ 20113 multiletter control sequences out of 15000+600000
+ 403446 words of font info for 29 fonts, out of 8000000 for 9000
+ 670 hyphenation exceptions out of 8191
+ 22i,4n,18p,481b,109s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on cover.pdf (1 page).

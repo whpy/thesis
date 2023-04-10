@@ -1,0 +1,189 @@
+\chapter{数值方法}
+
+
+\section{计算流体力学}
+计算流体力学（CFD）是研究流体力学的一种重要的手段。它的主要思想是将连续的流场用离散的对象逼近，通过求解差分方程进而得到流动方程近似的数值解。传统的物理实验研究可信度高，但是在某些复杂工况下实验操作难度大，重复实验的经济成本高，且测量关注的流场数据也是一个很大的挑战。而以CFD为研究手段则很好地克服了这些不足，且通过发展更高精度的算法可以通过CFD研究分析实验中难以监测到的流场结构。本文中采取的研究手段也是CFD，通过数值方法模拟槽道流动以及湍流带的生成与发展。
+
+CFD的基本流程可以分为3步：
+
+第一步是问题建模，根据不同问题进行适当的数学建模。对于流体力学问题虽然NS方程可以很好地描述一切流体流动现象，但在实际计算中会根据物理上的对称性、方程中不同项目的贡献程度对待求解方程以及计算域进行适当的简化，从而极大的减小计算量或者选择更高精度的格式。比如在求解浅水波问题时，注意到沿水深方向上的高度变化远小于水面的变化，进而将三维的水深问题简化为求解二维或者一维的偏微分控制方程；在圆管流动中，某些研究会根据圆管流向和环向上的周期性选择适当的周期函数作为基函数，从而天然地满足物理现象的周期性并获得极高的精度。
+
+第二步是离散，先将求解的物理域从连续离散成有限个对象，再根据这些对象间的空间关系以及拓扑关系构建差分方式和累加方式来逼近微分算子和积分算子。根据离散后对象的不同可以分成粒子法和网格法。粒子法是以拉格朗日视角处理流体的运动，即关注流体中每一个流体微团的运动轨迹。通过将流体微团抽象成移动的粒子，研究粒子的运动轨迹来模拟流体的整体行为，典型的有光滑粒子法（Smooth Particle Hydrodynamics）和半隐式移动粒子法（Moving Particle Semi-implicit），这两者都是在粒子上装配核函数模拟流体微团，不同的是传统的SPH适合求解弱可压问题，而MPS方法从方法构造上就是用于求解不可压问题。粒子法适合用于求解有复杂自由界面的流动问题，比如流固耦合问题，它可以轻易的处理破碎的流体界面。但是缺点是粒子法精度不足，一般用来求解工程问题，很少用于研究精细的湍流问题。网格法是用欧拉视角研究流体运动，离散的不是流体而是计算域，将计算域表示成许多互不相交的子域，在每个子域内求解NS方程。网格法较于粒子法在处理破碎液面等问题上灵活性较差（比如VOF方法），但是网格法的优点是可以得到高阶精度的模拟结果。本文中使用的模拟软件Nektar++使用的方法就属于网格法。根据离散原理不同，主流的CFD方法有有限差分法、有限元法以及谱方法。
+
+有限差分法（Finite Difference Method，FDM）的思想是将计算域离散成一个一个空间中固定的点，根据点与点之间的空间关系构建差分格式，将微分方程转换为差分方程。在足够规整的网格中可以通过应用高阶格式得到高精度的模拟结果；
+
+有限元方法（Finite Elements Method）的思想是将计算域离散成多个小的有限单元。在每个单元内通过基函数逼近求解偏微分方程，有限元方法的优点是对于复杂几何外形有很好的适应性。有限元方法一开始为求解结构力学而开发出来的方法。在1970年左右有限元方法被引入求解CFD问题，并且发现有限元在无粘空气动力学模拟上有很好的表现，因为它能很好的适应复杂的机翼几何外形。
+
+谱方法（Spectral Method）的基本思想是在整个计算域上用一系列的高阶正交多项式的线性和来逼近偏微分方程的解。如傅里叶函数系（三角函数），勒让德多项式等。将求解空间中点或有限单元的值转换为求解全局多项式每一项对应的系数。谱方法的优点是根据计算域以及边界条件挑选适当选择函数系后可以得到极高的精度，且由于正交性收敛速度极快。缺点是谱方法对计算域的几何外形要求很高，比较适合有极高对称性的计算域。\cite{spectralhp,spectral1984}
+
+第三步是求解差分方程，根据上一步中的离散方式给出差分关系逼近微分算子，将连续的偏微分方程转化为线性的差分方程。
+
+\section{Nektar++与谱元法}
+\subsection{Nektar++概述}
+本文使用的CFD软件为开源软件Nektar++。Nektar++采用的数值方法是高阶谱元型有限元（Spectral/hp Element Methods）方法，Nektar++基于这套方法为基准开发了一系列高精度高性能的常见偏微分方程求解器，比如本文使用的不可压缩流体求解器（IncNavierStokesSolver）。Nektar++为伦敦帝国理工学院和美国由他大学合作开发，可跨平台运行，采用C++语言编写。开发组设计了一套架构严格的开发框架以及相关的编程范式，使得初学者可以很快写出高性能的并发求解器，许多学者根据自身需要在Nektar++上进行二次植入与开发。
+
+\subsection{连续伽辽金方法（CG）}
+高阶谱元法的基本思想是希望结合有限元方法和谱方法的优点，既能适应各种复杂的几何外形同时能获得高精度的数值解。以Nektar++具体实现为例，首先与有限元一样，将计算域离散成许多有限单元，这里要求离散得到有限单元几何外形有一定的。然后在每一个有限单元内装配高阶正交多项式。可以看出，谱元法的精度由两个因素控制：一个是有限元的尺寸，尺寸越小能解析的精度越高，这被称为h精度；另外一个是跟每个有限单元内的多项式阶数相关，这被称为p精度。值得注意的是，根据在有限单元的接触面上解是否连续可以分为连续伽辽金方法（Continuous Galerkin，CG）和离散伽辽金方法（Discontinuous Galerkin，DG）。本文采用的是连续伽辽金方法，即有限元之间的接触面上方程的解是连续的。下一节中将基于Helmholtz方程简单阐述Nektar++中是如何实现连续伽辽金方法的。
+
+\subsubsection{Helmholtz方程}
+对于已知形式的偏微分方程：
+$$\mathcal{L}(u) = 0$$
+连续伽辽金（Continuous Galerkin，CG）方法的本质是用一系列已知形式的基函数（模态）的线性和去逼近方程的解，需要求解的是基函数（模态）对应的系数（模数）。假设近似解的形式为$u^{\delta} = \sum_{0}^{N_{dof}-1}\hat{u}_{i}\Phi_{i}(x)$,其中$\Phi_{i}(x)$为在计算域上连续的多项式，$N_{dof}$表示求解域中的自由度。将其代入偏微分方程可得残差项：
+$$\mathcal{L}(u^{\delta}) = R(u^{\delta})$$
+CG确定未知系数$\hat{u}_{i}$的方法类似于寻找方程的弱解，计$\int_{\Omega}fgdx = (f,g)$称为内积。对方程两边作关于$N_{dof}$个基函数分别作积分：
+$$(\mathcal{L}(u^{\delta}),\Phi_{i}(x)) = (R(u^{\delta}),\Phi_{i}(x))$$
+由此可得关于$N_{dof}$个未知系数的线性方程。
+
+以下以Helmholtz方程来说明。Helmholtz方程指的是形如式\ref{equ:helm}的偏微分方程。Helmholtz方程求解器在Nektar++中占有重要地位。从源码的角度看，Nektar++（截至版本5.2.0）内置的基本偏微分求解器只有Helmholtz求解器，因此在求解其它复杂方程（如声学方程，浅水波方程）时，基本思路都是将其转化或分解成若干个Helmholtz方程求解。Nektar++目前为止支持三类边界条件：黎曼边界条件，迪利克雷边界，Robin边界条件。其中黎曼边界和迪利克雷边界可以同时存在于边界上，也可称为混合边界条件。
+\begin{equation}
+\begin{aligned}
+	\nabla^2 u + ku = f(x)
+\end{aligned}
+\label{equ:helm}
+\end{equation}
+需要指出的一点是，对于混合边界条件的Helmholtz方程，若存在解则解具有唯一性，再根据弱收俩和强收敛的一致性，可以保证伽辽金方法求得的解是唯一的，证明过程此处不赘述。
+
+下面以最常见的具有混合（mixed）边界条件的Helmholtz方程为例说明连续伽辽金法的基本求解过程并展示Nektar++中如何保证连续性和处理经典的两类边界条件（迪利克雷边界条件，黎曼边界条件）。
+\begin{equation}
+\left\{
+\begin{aligned}
+	\nabla^2 u - \lambda u + f &= 0, x \in \Omega \\
+	u(\partial \Omega_1) &= g_{D},\\
+	\frac{\partial u}{\partial \bm n}(\partial\Omega_2) &= g_{N}\\
+	\partial\Omega_1\cup\partial\Omega_2 &= \partial\Omega
+\end{aligned}
+\right.
+\label{equ:helm}
+\end{equation}
+式中为方便表示用$v$指代任意基函数，对方程两边作内积并运用高斯散度定理可得：
+$$\int_{\partial\Omega}\frac{\partial u}{\partial \bm n}v - \int_{\Omega} \nabla u\cdot \nabla v - \lambda\int_{\Omega}uv + \int_{\Omega}fv = 0$$
+可以看出上述方程中的第一项涉及到了边界条件信息，Nektar++中优先保证的是迪利克雷边界条件，将解$u^{\delta}$分解为$u^{\delta} = u^{H} + u^{D}$，其中$u^{H}$表示在迪利克雷边界上为0的部分，即$u^{D}(\partial\Omega_1) = g_{D}, u^{H}(\partial\Omega_1) = 0$。Nektar++在每个有限元中配置的高阶多项式在有限元边界上都取值为0，通过简单的线性函数控制边界上积分点处的取值，这个巧妙的技巧同时使得可以控制不同有限元在边界上保证是连续的。故可以通过迪利克雷边界上线性函数对应的系数值控制$u^{D}$在边界的值，使得解满足$u(\partial \Omega_1) = g_{D}$，即由迪利克雷边界条件已能预先确定部分系数的取值。由式子\ref{equ:helm}的边界条件可得：
+$$\int_{\Omega}u^{H}v + \lambda\int_{\Omega}u^{H}v = \int_{\Omega}\nabla u^{D}v - \int_{\Omega}fv - \int_{\partial\Omega}g_{N}v$$
+上式中等号左端为未知项，右端全为已知项，离散后即可得到相应的线性方程组。综上所述，Nektar++通过强形式保证解的迪利克雷边界条件成立，通过边界积分项逼近黎曼条件。
+
+Nektar++采取的谱元法中$\Phi_{i}(x)$很难写出全局上的数学表达，但在每个有限单元实际上都用同一系列形式规整的高阶多项式（如勒让德多项式等）累加逼近，然后通过从局部到全局的装配矩阵$\bm M$将所有的局部多项式组合成全局的多项式系。虽然理论形式上谱元法有别于其它方法不关注有限元中的插值点，但在实际实现中为了完成积分操作，每个有限单元中都会配置一系列特殊的配点以提高积分精度（如Gauss-Legrendre积分配点）。由此$\Phi_{i}(x)$即计算域中所有有限元中不重叠的配点的总数。根据配点的重叠关系也就能构造出从有限元到全局的装配矩阵$\bm M$。但在实际求解中Nektar++的程序结构并不以该展开式为基础搭建，而是更近一步的展开到每一个有限单元的形式（式\ref{equ:nek_exp}），链接第二个等号两端的即是装配矩阵$\bm M$。其中$\phi^{std}$为特殊构造的多项式系，满足前文提到的边界上仅线性函数不为零的条件；$\hat{u}^{e}_{n}$为在e有限元中阶数为n的多项式对应的系数；$[\mathcal{X}^{e}]^{-1}(\bm x)$代表从全局坐标映射回标准立方体单元内的映射函数，Nektar++中所有的积分操作都是以标准立方体为计算域得到相应值，再经过Jacobi行列式将标准立方体计算域映射到实际有限单元中求得。从全局映射回标准计算域的操作中可以看出Nektar++中的谱元法在有限单元的外形上有一定的限制，实际上Nektar++初始的谱元法中有限单元的种类限定为7种，其中一维1种（线段），二维两种（四边形，三角形），三维4种（六面体，四棱锥，三棱柱，四面体）。
+\begin{equation}
+\begin{aligned}
+	u^{\delta} = \sum_{0}^{N_{dof}-1}\hat{u}_{i}\Phi_{i}(x) = \sum_{e\in\varepsilon}\sum_{n\in\mathcal{N}}\phi^{std}_{n}([\mathcal{X}^{e}]^{-1}(\bm x))\hat{u}^{e}_{n}
+\end{aligned}
+\label{equ:nek_exp}
+\end{equation}
+\subsection{VCS（速度修正）算法}
+本文使用的是Nektar++提供的无压缩流求解器（IncNavierStokesSolver），通过速度修正算法（Velocity Correction Scheme，VCM）求解经典无压缩纳维-斯托克斯方程（\ref{equ_ns}）
+\begin{equation}
+    \begin{aligned}
+\frac{\partial \boldsymbol{u}}{\partial t} + \boldsymbol{u}\cdot \nabla\boldsymbol{u} &= -\nabla p + \nu \nabla^2 \boldsymbol{u} + \boldsymbol{F}, \\
+\nabla\cdot \boldsymbol{u} &= 0,
+\end{aligned}
+\label{equ_ns}
+\end{equation}
+这套算法本质上是通过算子分裂将压力场和速度场进行解耦，先求出压强接着再求解速度场。这套算法的好处是可以很方便地独立处理压强和速度这两个量，但是缺点是这套算法天然的会由于不满足不可压缩方程的质量守恒条件而造成计算误差。然而经过分析这个误差的量级是可以接受的。
+
+对于待求解的下一时刻的流场$\bm u^{n+1}$算法具体分为以下三步：
+
+1、先求解压力场，准确来说是求解压力泊松方程的弱解。将NS方程两边与试函数$q$的梯度作内积，如式\ref{equ:pressure_poisson0}
+\begin{equation}
+    \begin{aligned}
+\int_{\Omega}\nabla q\cdot \frac{\partial \bm u^{n+1}}{\partial t} + \int_{\Omega}\nabla q\cdot \bm N{(\bm u)}^{n+1} = -\int_{\Omega}\nabla q\cdot \nabla p^{n+1} + \int_{\Omega}\nabla q\cdot \nu \nabla^2 \boldsymbol{u^{n+1}},
+\end{aligned}
+\label{equ:pressure_poisson0}
+\end{equation}
+其中，$\bm N(\bm u)$代表NS方程中的非线性项（如对流项，体积力等）的部分。注意到扩散项可以恒等变换为如式\ref{equ:pressure_poisson1}
+
+\begin{equation}
+    \begin{aligned}
+\nabla^2 \bm u = -\nabla \times \nabla \times \bm u + \nabla(\nabla \cdot \bm u),
+\end{aligned}
+\label{equ:pressure_poisson1}
+\end{equation}
+
+利用不可压NS方程中的质量守恒得后一项为0。根据散度定理，式\ref{equ:pressure_poisson0}转化为
+
+\begin{equation}
+    \begin{aligned}
+\int_{\Omega}\nabla q\cdot \frac{\partial \bm u}{\partial t} + \int_{\Omega}\nabla q\cdot \bm N(\bm u) = -\int_{\Omega}\nabla q\cdot \nabla p + \int_{\Omega}\nabla q\cdot \nu \nabla \times \nabla \times \boldsymbol{u},
+\end{aligned}
+\label{equ:pressure_poisson2}
+\end{equation}
+
+为了能消去未知速度场此处引入中间量$\tilde{\bm u^{n+1}}$，满足$\nabla \cdot \tilde{\bm u^{n+1}}=0$，由此可将时间导数项表示为式\ref{equ:pressure_poisson3}
+
+\begin{equation}
+    \begin{aligned}
+\frac{\partial \bm u^{n+1}}{\partial t} \sim \frac{\gamma_0 \tilde{\bm u}^{n+1} - \hat{\bm u}}{\triangle t},
+\end{aligned}
+\label{equ:pressure_poisson3}
+\end{equation}
+
+其中：
+\begin{equation}
+\gamma_0 = \left\{
+    \begin{aligned}
+    1, n = 2\\
+    \frac{3}{2},  n > 2
+\end{aligned}
+\right.,
+\hat{\bm u} = 
+\left\{
+\begin{aligned}
+\bm u^{n}, n = 2\\
+2\bm u^{n} - \frac{1}{2}\bm u^{n-1}, n > 2 
+\end{aligned}
+\right.
+\label{equ:time_gradient}
+\end{equation}
+
+此时可以得到积分形式下压强的泊松方程：
+
+\begin{equation}
+    \begin{aligned}
+\int_{\Omega}\nabla q\cdot \nabla p^{n+1} = \int_{\Omega}q\nabla \cdot(-\frac{\tilde{\bm u}}{\delta t}+N(\bm u)^{n+1}) - \int_{\partial \Omega}q(\frac{\partial \bm u^{n+1}}{\partial t} + N(\bm u)^{n+1} + \nu\nabla \times \nabla \times \bm u^{n+1}) \cdot \bm n,
+\end{aligned}
+\label{equ:pressure_poisson4}
+\end{equation}
+
+对应的即是压力泊松方程\ref{equ:pressure_poisson5},\ref{equ:pressure_poisson5_1} 的弱形式。
+\begin{equation}
+\begin{aligned}
+\nabla^{2}p^{n+1} = \nabla \cdot (\frac{\hat{u}}{\triangle t} - \bm N^{n+1}),
+\end{aligned}
+\label{equ:pressure_poisson5}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial p^{n+1}}{\partial n} = (\frac{\partial \bm u^{n+1}}{\partial t} + N(\bm u)^{n+1} + \nu\nabla \times \nabla \times \bm u^{n+1}) \cdot \bm n
+\end{aligned}
+\label{equ:pressure_poisson5_1}
+\end{equation}
+
+第二步、在得到压强$p^{n+1}$后将压强场回代到式\ref{equ_ns}中，根据式\ref{equ:pressure_poisson3}对时间导数进行离散，最后转化为求解
+
+\begin{equation}
+\begin{aligned}
+(\nabla^{2} - \frac{\gamma_{0}}{\nu\triangle t}) \bm u^{n+1} = -(\frac{\gamma_{0}}{\nu\triangle t})\hat{u} + \frac{1}{\nu}\nabla p^{n+1},
+\end{aligned}
+\end{equation}
+
+可以看出以上每一步都为Helmholtz方程的求解，因此所得解的唯一性可保证。
+%
+%\subsection{IMEX时间步进算法}
+%隐式-显示算法（implicit-explicit scheme， IMEX）是nektar++内部支持的一种时间步进算法，是通用线性推进法（General Linear Method，GLM）的一种，GLM的比起方法更类似一种框架，统一表示了常见的几种时间步进算法，它将时间步进法视为不同的涉及r个历史时间步$\bm y^{n}_1, \bm y^{n}_2,\bm y^{n}_3,...\bm y^{n}_r$和s个中间步$\bm Y^{n}_1, \bm Y^{n}_2,\bm Y^{n}_3,...\bm Y^{n}_r$的线性表示$\bm M$，不同方法之间的区别就是线性组合的矩阵不同。IMEX方法的核心思想则是将常微分方程的右端项分解成刚度项（stiff term）和非线性项（nonlinear term），用隐式方法求解刚度项以避免收敛需要的过小时间步长；用显示方法方便的求出非线性项下一时间步的值。
+%
+%\begin{equation}
+%\frac{d \bm y}{dt} = \bm f(\bm y) + \bm g(\bm y)
+%\label{equ:IMEX}
+%\end{equation}
+%
+%其核心算法流程如下：
+%1、输入上一时间步的值$\bm y^{n-1}$，
+%%
+%%
+%%\subsection{边界条件处理}
+%%求解不可压NS方程过程中，第一类边界，第二类边界如何处理。采用高阶齐次的压强边界条件（引用原文）
+
+\section{小结}
+本章介绍了本文工作中使用的数值方法及相关的基础知识。首先简单介绍了主流的CFD方法以及其相应的基本思想，优点和不足，接着引入本文使用的高精度且适应性强的谱元法。随后介绍了本文采用的数值模拟软件Nektar++并对Nektar++如何实现谱元法做了基本的介绍。
+
+%\subsubsection{测试}
+%测试四级标题

@@ -1,0 +1,60 @@
+\thispagestyle {only_foot}
+\ttl@change@i {\@ne }{chapter}{0em}{\vspace {0pt}\xiaosi \song }{\prechaptername \thecontentslabel \postchaptername \quad }{}{\hspace {.5em}\titlerule *[5pt]{.}\xiaosi \contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{2em}{\vspace {0pt}\xiaosi \song }{\thecontentslabel \quad }{}{\hspace {.5em}\titlerule *[5pt]{.}\xiaosi \contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{4em}{\vspace {0pt}\xiaosi \song }{\thecontentslabel \quad }{}{\hspace {.5em}\titlerule *[5pt]{.}\xiaosi \contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {chapter}{\numberline {1}绪论}{1}{section*.5}%
+\contentsline {section}{\numberline {1.1}研究背景以及问题提出}{1}{section*.6}%
+\contentsline {subsection}{\numberline {1.1.1}亚临界转捩与槽道湍流带}{1}{section*.7}%
+\contentsline {subsection}{\numberline {1.1.2}湍流带自持性和瞬态性}{5}{section*.13}%
+\contentsline {section}{\numberline {1.2}本文结构}{8}{section*.20}%
+\contentsline {chapter}{\numberline {2}数值方法}{11}{section*.21}%
+\contentsline {section}{\numberline {2.1}计算流体力学}{11}{section*.22}%
+\contentsline {section}{\numberline {2.2}Nektar++与谱元法}{12}{section*.23}%
+\contentsline {subsection}{\numberline {2.2.1}Nektar++概述}{12}{section*.24}%
+\contentsline {subsection}{\numberline {2.2.2}连续伽辽金方法（CG）}{13}{section*.25}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Helmholtz方程}{13}{section*.26}%
+\contentsline {subsection}{\numberline {2.2.3}VCS（速度修正）算法}{15}{section*.27}%
+\contentsline {section}{\numberline {2.3}小结}{16}{section*.28}%
+\contentsline {chapter}{\numberline {3}侧壁与湍流带的相互作用}{17}{section*.29}%
+\contentsline {section}{\numberline {3.1}引言}{17}{section*.30}%
+\contentsline {section}{\numberline {3.2}数值模型}{17}{section*.31}%
+\contentsline {subsection}{\numberline {3.2.1}湍流模型}{17}{section*.32}%
+\contentsline {subsection}{\numberline {3.2.2}计算域与边界条件}{18}{section*.33}%
+\contentsline {subsection}{\numberline {3.2.3}控制方程及离散}{20}{section*.36}%
+\contentsline {subsection}{\numberline {3.2.4}湍流带生成控制}{20}{section*.37}%
+\contentsline {section}{\numberline {3.3}基本流流场分析}{22}{section*.38}%
+\contentsline {section}{\numberline {3.4}湍流带生成}{24}{section*.41}%
+\contentsline {section}{\numberline {3.5}实验结果}{24}{section*.46}%
+\contentsline {subsection}{\numberline {3.5.1}侧壁与湍流带相互作用}{24}{section*.47}%
+\contentsline {subsection}{\numberline {3.5.2}下游端头消失机制}{26}{section*.66}%
+\contentsline {subsection}{\numberline {3.5.3}湍流带消散机制分析}{29}{section*.76}%
+\contentsline {section}{\numberline {3.6}小结}{30}{section*.78}%
+\contentsline {chapter}{\numberline {4}湍流带寿命的神经网络预测}{33}{section*.79}%
+\contentsline {section}{\numberline {4.1}引言}{33}{section*.80}%
+\contentsline {section}{\numberline {4.2}MFE瞬态性预测}{33}{section*.81}%
+\contentsline {subsection}{\numberline {4.2.1}MFE湍流的瞬态性表现}{33}{section*.82}%
+\contentsline {subsection}{\numberline {4.2.2}MFE瞬态性预测方法}{34}{section*.84}%
+\contentsline {section}{\numberline {4.3}湍流带瞬态性预测}{36}{section*.88}%
+\contentsline {subsection}{\numberline {4.3.1}方法迁移}{36}{section*.89}%
+\contentsline {subsection}{\numberline {4.3.2}湍流带衰减数据}{36}{section*.90}%
+\contentsline {subsection}{\numberline {4.3.3}POD模态分解}{38}{section*.92}%
+\contentsline {subsection}{\numberline {4.3.4}神经网络训练与预测}{41}{section*.98}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}ESN 网络}{41}{section*.99}%
+\contentsline {subsubsection}{\numberline {4.3.4.2}LSTM 网络}{45}{section*.115}%
+\contentsline {subsection}{\numberline {4.3.5}增强数据特征}{47}{section*.129}%
+\contentsline {subsubsection}{\numberline {4.3.5.1}强调鞍点数据}{48}{section*.130}%
+\contentsline {subsubsection}{\numberline {4.3.5.2}截断尾部波状结构}{49}{section*.132}%
+\contentsline {subsubsection}{\numberline {4.3.5.3}添加头部倾角}{49}{section*.133}%
+\contentsline {subsubsection}{\numberline {4.3.5.4}增强特征后预测效果}{52}{section*.142}%
+\contentsline {section}{\numberline {4.4}小结}{53}{section*.153}%
+\contentsline {chapter}{\numberline {5}总结与展望}{55}{section*.154}%
+\contentsline {section}{\numberline {5.1}全文总结}{55}{section*.155}%
+\contentsline {section}{\numberline {5.2}本文的创新点}{55}{section*.156}%
+\contentsline {section}{\numberline {5.3}研究展望}{56}{section*.157}%
+\contentsline {chapter}{参考文献}{57}{section*.159}%
+\contentsline {chapter}{发表论文和参加科研情况说明}{61}{section*.161}%
+\contentsline {chapter}{致\hskip 2em\relax 谢}{63}{section*.163}%
+\contentsfinish 

@@ -1,0 +1,199 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{xu_song_2022}
+\citation{Anton2023}
+\citation{Anton2023}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}湍流带寿命的神经网络预测}{33}{section*.79}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}引言}{33}{section*.80}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}MFE瞬态性预测}{33}{section*.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}MFE湍流的瞬态性表现}{33}{section*.82}\protected@file@percent }
+\citation{Moehlis2004ALM}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-1}{\ignorespaces MFE湍流演化过程中能量随时间变化图。当流场处于湍流状态时能量在较低的范围内波动；流场层流化后流场能量升至某一水平不再变化。图中实线是神经网络预测的MFE流场的能量随时间的变化，虚线是数值模拟MFE流动中能量的变化图。}}{34}{section*.83}\protected@file@percent }
+\newlabel{fig:MFE}{{4-1}{34}{MFE湍流的瞬态性表现}{section*.83}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}MFE瞬态性预测方法}{34}{section*.84}\protected@file@percent }
+\newlabel{equ:MFE}{{4-1}{34}{MFE瞬态性预测方法}{equation.4.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-2}{\ignorespaces (a)不同雷诺数下，通过实际数值计算的流场能量随时间变化图。可以看到在不同雷诺数下，MFE流动的能量最终都会升高到某一值后不再变化（即湍流衰减至层流）。图中阴影部分为用于训练ESN神经网络的湍流数据时间段。(b)MFE湍流的寿命关于雷诺数的分布，横轴是时间纵轴是存活率。其中实线代表神经网络对不同雷诺数下的MFE湍流进行多次重复预测得到的，虚线是实际数值模拟实验得到的寿命分布。}}{35}{section*.85}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces }}{35}{section*.86}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces }}{35}{section*.87}\protected@file@percent }
+\newlabel{fig:MFE}{{4-2}{35}{MFE瞬态性预测方法}{section*.87}{}}
+\citation{xu_song_2022}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}湍流带瞬态性预测}{36}{section*.88}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}方法迁移}{36}{section*.89}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}湍流带衰减数据}{36}{section*.90}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4-3}{\ignorespaces （a）下游头部运动速度展向分量(w)随时间变化图。（b）Anton提到的神经网络因训练数据集不同表现的预测能力的不同，可以看到当训练集没有包含流场十分接近层流态的数据时（能量十分接近层流水平）神经网络无法最终预测出流场的层流化。}}{38}{section*.91}\protected@file@percent }
+\newlabel{fig:head_speed}{{4-3}{38}{湍流带衰减数据}{section*.91}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}POD模态分解}{38}{section*.92}\protected@file@percent }
+\newlabel{PODdata}{{4-2}{39}{POD模态分解}{equation.4.3.2}{}}
+\newlabel{PODmat}{{4.3.3}{39}{POD模态分解}{equation.4.3.3}{}}
+\newlabel{PODeny}{{4.3.3}{39}{POD模态分解}{equation.4.3.3}{}}
+\newlabel{equ:TKE}{{4-4}{39}{POD模态分解}{equation.4.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-4}{\ignorespaces POD处理后得到的前三个个主要模态。}}{41}{section*.93}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces mode = 1}}{41}{section*.94}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces mode = 2}}{41}{section*.95}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces mode = 3}}{41}{section*.96}\protected@file@percent }
+\newlabel{fig:main_mode_sample}{{4-4}{41}{POD模态分解}{section*.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-5}{\ignorespaces 主要模态对方差的累计贡献的百分比图，为方便展示此处仅列出前1000个模数对应的特征值。}}{41}{section*.97}\protected@file@percent }
+\newlabel{fig:main_mode}{{4-5}{41}{POD模态分解}{section*.97}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}神经网络训练与预测}{41}{section*.98}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4.1}ESN 网络}{41}{section*.99}\protected@file@percent }
+\citation{Anton2023}
+\citation{Pandey2020}
+\citation{Pandey2020}
+\citation{Pandey2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-6}{\ignorespaces ESN网络训练预测示意图。$\bm  {a}(t)$为t时刻流场的模数，$\bm  {r}(t)$为该时刻池化层的状态。}}{42}{section*.100}\protected@file@percent }
+\newlabel{fig:ESN_structure}{{4-6}{42}{ESN 网络}{section*.100}{}}
+\newlabel{equ:ESN1}{{4-6}{42}{ESN 网络}{equation.4.3.6}{}}
+\newlabel{equ:ESN2}{{4-7}{42}{ESN 网络}{equation.4.3.7}{}}
+\newlabel{equ:ESN3}{{4-8}{42}{ESN 网络}{equation.4.3.8}{}}
+\newlabel{tab:hyper_parameter}{{4.3.4.1}{43}{ESN 网络}{equation.4.3.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4-1}{\ignorespaces 不同池化层大小下ESN网络的表现。}}{43}{section*.101}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4-2}{\ignorespaces 本文中ESN采用的超参数组合}}{43}{section*.102}\protected@file@percent }
+\newlabel{tab:optim_parameter}{{4-2}{43}{ESN 网络}{section*.102}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-7}{\ignorespaces （a）在训练数据集中ESN预测的流场的流场能量与实际流场的能量对比。（b）ESN向后预测的流场能量与实际能量对比。}}{44}{section*.103}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces }}{44}{section*.104}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces }}{44}{section*.105}\protected@file@percent }
+\newlabel{fig:esn_perform}{{4-7}{44}{ESN 网络}{section*.105}{}}
+\citation{LSTM}
+\citation{Karpathy2015VisualizingAU}
+\citation{Anton2023}
+\citation{dropout}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-8}{\ignorespaces ESN预测的流场衰减过程与实际衰减过程对比。其中a-d是实际衰减流场，e-h是ESN预测的衰减流场。可以看到ESN预测的流场虽然表现出衰减，但是与实际衰减过程相比，关键的条纹角度变化并没有预测出来。}}{45}{section*.106}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces Truth t=10001}}{45}{section*.107}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces t=10050}}{45}{section*.108}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces t=10250}}{45}{section*.109}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces t=11500}}{45}{section*.110}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces ESN t=10001}}{45}{section*.111}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces t=10050}}{45}{section*.112}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces t=10250}}{45}{section*.113}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces t=11500}}{45}{section*.114}\protected@file@percent }
+\newlabel{fig:esn_decay}{{4-8}{45}{ESN 网络}{section*.114}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4.2}LSTM 网络}{45}{section*.115}\protected@file@percent }
+\citation{lstmmodes}
+\citation{Pandey2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-9}{\ignorespaces （a）LSTM结构示意图，采取了更多的非线性函数构造门结构记忆历史数据。（b）本文中采取的双层LSTM网络结构示意图。两层中间插入了随机关闭层dropout以增加泛化性。}}{46}{section*.116}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces }}{46}{section*.117}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces }}{46}{section*.118}\protected@file@percent }
+\newlabel{fig:lstm}{{4-9}{46}{LSTM 网络}{section*.118}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-10}{\ignorespaces LSTM预测的后续流场（a-d）与实际流场（e-h）对比。}}{47}{section*.119}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces LSTM t=10001}}{47}{section*.120}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces t=10100}}{47}{section*.121}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces t=11000}}{47}{section*.122}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces t=14000}}{47}{section*.123}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces actual t=10001}}{47}{section*.124}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces t=10050}}{47}{section*.125}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces t=10250}}{47}{section*.126}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces t=11500}}{47}{section*.127}\protected@file@percent }
+\newlabel{fig:lstm_purepred}{{4-10}{47}{LSTM 网络}{section*.127}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-11}{\ignorespaces LSTM预测出的流场能量变化图，以及与实际流场的比较。可以看出在前面的时间段，LSTM预测出的能量在趋势上和实际流场有一定的吻合度，但可以看出在某一时刻后，流场陷入了某个周期稳定解。}}{47}{section*.128}\protected@file@percent }
+\newlabel{fig:lstm_purepred_eny}{{4-11}{47}{LSTM 网络}{section*.128}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}增强数据特征}{47}{section*.129}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.1}强调鞍点数据}{48}{section*.130}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4-12}{\ignorespaces 原始数据集中截取的后4600步数据集，框选的时间段为训练数据集。圆圈选中的时间段中，展向运动速度w有一个明显的下降，且由于整体时间长度的减小，运动速度突变的数据段整体占比升高。}}{48}{section*.131}\protected@file@percent }
+\newlabel{fig:short_speed}{{4-12}{48}{强调鞍点数据}{section*.131}{}}
+\citation{Tao2017ExtendedLS}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.2}截断尾部波状结构}{49}{section*.132}\protected@file@percent }
+\newlabel{fig:cutcomp}{{4.3.5.2}{49}{截断尾部波状结构}{subfigure.4-13.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.3}添加头部倾角}{49}{section*.133}\protected@file@percent }
+\newlabel{equ:tangle_measure}{{4-9}{49}{添加头部倾角}{equation.4.3.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-13}{\ignorespaces t=4010时，实际流场（a）与二值化后的流场（b）对比。通过递归法找出所有不连通条带区域，接着挑选出右下第一根面积大于某一阈值的条纹作为代表条纹，测算其倾角。}}{50}{section*.134}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 完整湍流带流场}}{50}{section*.135}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 截断尾部波状结构的流场}}{50}{section*.136}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces }}{50}{section*.137}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces }}{50}{section*.138}\protected@file@percent }
+\newlabel{fig:4010angle}{{4-13}{50}{添加头部倾角}{section*.138}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-14}{\ignorespaces 头部倾角随时间变化的数据。（a）上图为取样得到的原始倾角数据，下图代表经过滤波在时间尺度上平滑化后的数据。（b）头部倾角变化与展向运动速度变化的对比。可以看出，在展向流速突然减小的同时（图中阴影部分）都能观察到头部倾角大幅度下降的现象。}}{51}{section*.139}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces 原始取样倾角与滤波后数据}}{51}{section*.140}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces 头部倾角与头部展向运动速度变化对比}}{51}{section*.141}\protected@file@percent }
+\newlabel{fig:angle_process}{{4-14}{51}{添加头部倾角}{section*.141}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.4}增强特征后预测效果}{52}{section*.142}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4-15}{\ignorespaces 添加头部条纹倾角数据后，LSTM网络的预测表现。本文截取了关键的头部条纹生成部分，舍弃了大部分的波状结构区域以期望神经网络专注于更重要的头部附近。（a）-（d）是LSTM的预测流场，（e）-（h）是实际流场。}}{52}{section*.143}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces LSTM}}{52}{section*.144}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces }}{52}{section*.145}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces }}{52}{section*.146}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces }}{52}{section*.147}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces truth}}{52}{section*.148}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces }}{52}{section*.149}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces }}{52}{section*.150}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces }}{52}{section*.151}\protected@file@percent }
+\newlabel{fig:4010angle_performance}{{4-15}{52}{增强特征后预测效果}{section*.151}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-16}{\ignorespaces LSTM预测的流场能量与实际流场能量对比,可以看出与未增强数据特征相比，LSTM预测的流场能量波动更剧烈。}}{52}{section*.152}\protected@file@percent }
+\newlabel{fig:LSTM_angle_eny}{{4-16}{52}{增强特征后预测效果}{section*.152}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}小结}{53}{section*.153}\protected@file@percent }
+\@setckpt{body/prediction}{
+\setcounter{page}{54}
+\setcounter{equation}{9}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{4}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{16}
+\setcounter{table}{2}
+\setcounter{parentequation}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{@contsubnum}{1}
+\setcounter{newflo@tctr}{4}
+\setcounter{NAT@ctr}{0}
+\setcounter{endNonectr}{31}
+\setcounter{currNonectr}{0}
+\setcounter{lstnumber}{1}
+\setcounter{AlgoLine}{0}
+\setcounter{algocfline}{0}
+\setcounter{algocfproc}{0}
+\setcounter{algocf}{0}
+\setcounter{ALC@unique}{0}
+\setcounter{ALC@line}{0}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{Hy@AnnotLevel}{0}
+\setcounter{bookmark@seq@number}{39}
+\setcounter{float@type}{8}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{0}
+\setcounter{pubctr}{0}
+\setcounter{currtheoremctr}{0}
+\setcounter{endtheoremctr}{0}
+\setcounter{theorem}{0}
+\setcounter{currlemmactr}{0}
+\setcounter{endlemmactr}{0}
+\setcounter{lemma}{0}
+\setcounter{curraxiomctr}{0}
+\setcounter{endaxiomctr}{0}
+\setcounter{axiom}{0}
+\setcounter{currpropositionctr}{0}
+\setcounter{endpropositionctr}{0}
+\setcounter{proposition}{0}
+\setcounter{currcorollaryctr}{0}
+\setcounter{endcorollaryctr}{0}
+\setcounter{corollary}{0}
+\setcounter{currdefinitionctr}{0}
+\setcounter{enddefinitionctr}{0}
+\setcounter{definition}{0}
+\setcounter{currconjecturectr}{0}
+\setcounter{endconjecturectr}{0}
+\setcounter{conjecture}{0}
+\setcounter{currexamplectr}{0}
+\setcounter{endexamplectr}{0}
+\setcounter{example}{0}
+\setcounter{currremarkctr}{0}
+\setcounter{endremarkctr}{0}
+\setcounter{remark}{0}
+}

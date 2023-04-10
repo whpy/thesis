@@ -1,0 +1,367 @@
+\chapter{侧壁与湍流带的相互作用}
+\section{引言}
+本章研究内容为通过数值模拟研究大宽高比槽道中湍流带与侧壁的相互作用，确定了湍流带碰撞后消失的临界雷诺数并分析了侧壁对湍流带头部作用的潜在机理。目前关于槽道湍流带理论研究的主要模型大部分都是理想的泊肃叶流动，即在流向和展向上为无穷大的槽道。由于湍流带的整体运动速度平行于法向固壁，故流场中不存在与湍流带相互作用的侧壁。关于湍流带与侧壁的相互作用尚未引起足够的关注，但在实际物理实验中并不存在边界无穷大的实体模型，而湍流带由于存在固有的展向运动速度，因此在实际实验中必然会与展向上的侧壁发生碰撞。Takeishi等人研究了槽道宽高比对转捩现象的影响\cite{Takeishi2015}，但作者仅考虑了最大宽高比为9的情况，这种情况下槽道的宽度不足以让湍流带完全发展出能稳定自持的下游端头，也就无法研究湍流带端头与侧壁碰撞后的真实情况。
+
+目前唯一明确讨论侧壁效应问题的是Paranjape等人的工作\cite{Paranjape2019}，作者在物理实验中观察到低雷诺数下湍流带在下游头部与槽道侧壁碰撞后快速衰减消失；Takeishi等人也在他们的工作中提到宽高比大于4的槽道中，边壁效应通过消减壁面附近的涡结构诱发展向局部湍斑\cite{Takeishi2015}。然而以上研究并没有提到是否存在某个临界雷诺数，使得湍流带在高于该临界值的情况下与边壁碰撞后仍能存活，且侧壁效应使湍流带消失的潜在机制也未被深入讨论。因此，本章的研究目的就是为了确定该临界雷诺数以及可能的潜在机制，所得结论能对将来类似的物理实验提供了一定的参考作用。
+
+\section{数值模型}
+\subsection{湍流模型}
+目前求解NS方程的湍流模型有三种，分别是雷诺平均法（Reynolds-averaged Navier-Stokes,RANS），大涡模拟法（Large Eddy Simulation，LES）以及直接数值模拟（Direct Numerical Simulation，DNS）。
+
+1、雷诺平均法，最早由雷诺提出。这种方法的主要思想是将流场分解为不随时间变化的平均流场和随时间剧烈变化的脉动流场，亦即是对流场内各个物理量进行时间平均得到雷诺平均运动方程。RANS相较于其它湍流模型的优势是计算速度快，但是在时间上取平均的操作减弱了流动整体的不定常性，不容易捕捉到复杂的湍流涡结构，不适合本文较精细的湍流结构研究。
+
+2、大涡模拟（LES）在1963年由气象学家Smagorinsky提出，LES的主要思想是在空间上采用一定的滤波器，只解析一定尺寸的大的涡流结构，对小的涡结构进行一定合理的理论假设使得方程封闭便于求解。LES的优点是能以更高的性价比处理所关心的湍流效应。LES认为湍流不是完全的随机运动而是存在某种拟序结构。LES相对RANS在处理复杂流动上有一定的提升，但是由于湍流的非线性性，在解析精细湍流行为时只解析大涡的LES的精度显然不足。
+
+3、直接数值模拟即是不对湍流作特殊假设直接求解非线性不定常NS方程，直接解析一切尺度下的流动结构。因此得到解是三种方法中精度最高然而也是对网格数量和计算时间要求也是最大的。但在超级计算机的辅助下，DNS方法的计算成本也降低到了可接受的范围内。鉴于湍流带中精细湍流结构的复杂性，本文选择使用DNS方法以模拟湍流。
+
+
+\subsection{计算域与边界条件}
+图（\ref{fig:base_model}）给出了本文数值模拟计算域的示意图，其中$x$ 轴为流向，$y$ 轴为法向，$z$ 轴为展向。如图所示，本文设置槽高$L_y = 2h$，$h$为数值模型的基本长度单位（即半槽高）。流向上选择周期性边界条件，一些研究指出在周期性槽道中若流向尺寸不够大会出现湍流带与自身相互作用的情况，进而导致湍流带的消失\cite{Tao2018}，这要求数值模型在流向上要有足够的长度容纳湍流带。为了避免自相互作用的同时尽量降低计算成本，本文参考了Tao等人的研究中的圆管尺寸\cite{Tao2018}，设置槽道的流向长度为$L_x = 100h$。该尺寸也与Takeishi等人采用的模型尺寸相当（流向长度接近120单位）\cite{Takeishi2015}。展向长度的选择主要基于槽道是否能容纳整个湍流带结构来考虑，展向上长度本文设置为$L_z = 100h$，即槽道的宽高比为50。这个宽高比远大于Takeishi等人DNS模拟所采用的宽高比 (最大为9)\cite{Takeishi2015}，与Yimprasert等人研究\cite{Yimprasert2021}中物理实验采用的宽高比（80）相当。注意到在其它相似工作\cite{Paranjape2019, Sano2016}中会采用更高的宽高比，但需要指出的是这些工作关注的重点是湍流带在远离侧壁时的行为，而本文的研究重点是湍流带靠近侧壁区域时的动力学行为，因此没有必要采用同一量级的宽高比造成计算资源的浪费。槽道中主流流动由定流量$Q$来驱动，$Q$的大小与同流域下平板泊肃叶流（即槽高相同时中心流速相同的泊肃叶流）的流量相等。根据以上参数，本文中雷诺数定义为$Re=\frac{3U_bh}{2\nu}$，$\nu$为流体的动力粘度，$U_b$为主流流速（即与主流方向正交的$z-y$切面上的流速的平均值）。速度与时间分别由$\frac{3U_b}{2}$以及$\frac{2h}{3U_b}$归一化。
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/side_wall/fig1-eps-converted-to.pdf}
+    \caption{计算域的几何外形，原点中心即为槽道入流处中心。流向、展向和法向分别表示为 x、z 和 y 方向。长度、宽度槽道高度为$L_x$，$L_z$ 和$L_y$分别表示。侧壁设置在展向两侧，即在$z = ±L_z/∕2$处阴影标注部分。}
+    \label{fig:base_model}
+\end{figure}
+
+鉴于在流向上施加的周期性边界条件，本文采用的是伪3D（quasi-3D）模拟。即不建模整个三维方槽，利用槽道外形在流向$x$上的周期性，仅对$z-y$截面用矩形有限单元离散，流向$x$上配置等距傅里叶谱点使用傅里叶多项式拟合。由于能在$x$方向上利用快速傅里叶变换（FFT）进行微分操作，相比于用单纯的谱元法离散三维槽道，方程求解效率更高且内存需求更少。
+
+为了能更好的解析近壁流动，本文在$z-y$截面采用不均匀大小的矩形有限元(参考图（\ref{fig:wall_distri}）)离散，矩形有限元的尺寸随着向壁面的靠近而减小。矩形有限元的格点在$z,y$轴上的具体分布由下式（\ref{grid}）求得：
+\begin{equation}\label{grid}
+\begin{aligned}
+z_n=L_z\frac{\arcsin(-\beta_z \cos(\pi t_n))}{\arcsin(\beta_z)}, \quad\quad y_m=L_y\frac{\arcsin(-\beta_y \cos(\pi t_m))}{\arcsin(\beta_y)},
+\end{aligned}
+\end{equation}
+其中$t_n$和$t_m$代表$[-1,1]$区间上均匀分布的点列，$\beta_z$ 和 $\beta_y$是$z,y$方向上控制网格疏密的参数。在本文中$\beta_z = 0.8$, $\beta_y = 0.25$。图2展示了近壁面网格的分布情况，在$z$方向上分布了80个单元（$N = 80$），y方向上分布了8个单元（$M = 8$）。网格通过开源网格划分软件Gmsh生成\cite{2008Gmsh}。
+
+\begin{figure}
+	\centering
+	\subfigure {\includegraphics[width=0.5\textwidth]{figures/side_wall/fig2-eps-converted-to.pdf}}
+    \caption{侧壁附近有限单元的分布情况。}
+    \label{fig:wall_distri}
+\end{figure}
+
+\subsection{控制方程及离散}
+本文中的流体为不可压缩流体，控制方程为不可压缩纳维-斯托克斯方程(Incompressible Navier-Stokes Equation)：
+\begin{equation}\label{equ:NS}
+\begin{aligned}
+\frac{\partial \boldsymbol{u}}{\partial t} + \boldsymbol{u}\cdot \nabla\boldsymbol{u} &= -\nabla p + \frac{1}{Re} \nabla^2 \boldsymbol{u} + \boldsymbol{F}, \\
+\nabla\cdot \boldsymbol{u} &= 0,
+\end{aligned}
+\end{equation}
+其中标量$p$代表压强，向量$\boldsymbol{F}$表示体积力，向量$\boldsymbol{u} = (u,v,w)$代表流向、法向、展向上的流速。
+
+在展向和法向的固壁上采用无滑移边界条件，即：
+\begin{equation}\label{equ:BC}
+\begin{array}{ll}
+\boldsymbol{u}|_{z=\pm 50} &= 0, \\
+\boldsymbol{u}|_{y=\pm 1} &= 0,
+\end{array}
+\end{equation}
+流向上采用前文提到的周期性边界条件，这表明本文的结果不考虑真实实验中有限长管道带来的物理效应而只关注侧壁效应。
+
+对于压强$p$和速度$\boldsymbol{u}$，本文在$z-y$平面内的每个矩形网格中配置高阶多项式，$x$方向上如上文所说使用傅里叶多项式。数学表达式如式（\ref{equ:expansion}）
+\begin{equation}\label{equ:expansion}
+\begin{aligned}
+ A(x,y,z,t) = \sum_{k=-K}^K\sum_{p,q=0}^P\hat{A}_{pqk}(t)\phi_{pq}(z,y)\exp(i\alpha kx),
+\end{aligned}
+\end{equation}
+
+其中$\hat{A}_{pqk}$表示下标为$(p,q,k)$的模态对应的系数；$\phi_{pq}(z,y)$代表多项式基；$\alpha$代表流向基波数，$2\pi/\alpha$表示流向槽道长度。根据流向长度$L_x=100$反解得$\alpha=2\pi/100$。为了满足解析转捩湍流结构所需的高数值精度，本文选择了改进型勒让德多项式基函数，最高阶数为9；每个矩形网格中均配置了基于高斯-勒巴托-勒让德多项式（Gauss–Lobatto–Legendre ，GLL）的子配点；流向上配置了768个傅里叶模数（即K=384）。在这些参数控制下计算模型的分辨率与其它湍流带的数值模拟实验\cite{Tuckerman2014,Tao2018, Xiao2020b}所采用的分辨率相当。
+
+本文采用Nektar++提供的不可压缩流求解器（IncNavierStokesSolver）中的伪三维（quasi-3D）模式求解控制方程\ref{equ:NS}。用到的算法为第二章中提到的算子分裂算法\citep{KARNIADAKIS1991414}（Nektar++称之为速度修正算法）。时间步进上用到的是Nektar++提出的3阶隐式显示时间推进格式（IMEXOrder3）\cite{nektar}。同时，为了能更精确求解压力泊松方程，边界上使用了高阶压力边界条件\cite{KARNIADAKIS1991414}，基本时间步长设置为$\Delta t=0.015$。
+
+\subsection{湍流带生成控制}
+前文中提到为了能得到具有代表性的结论，实验中与边壁碰撞的湍流带应当是经过足够长时间段发展充分的。本文通过诱导湍流带在距壁面较远处生成并向该壁面运动，从而在湍流带碰壁前预留出足够的移动距离以达到该目的。数值实验\cite{Tao2018}和物理实验\cite{Paranjape2019, Yimprasert2021}表明在雷诺数$Re\simeq 800$下需要十分特殊的外部扰动\cite{Tao2018}才能诱导槽道湍流带的生成，而若要进一步在特定位置生成沿特定方向（关于主流方向呈特定倾角）运动的湍流带更是难上加难。Song\& Xiao等\cite{Song2020}提出了一个有效的数值诱导方法能够在低雷诺数下高效的生成湍流带，同时能精确控制生成的带的位置以及运动方向。该方法主要基于Xiao\& Song等\cite{Xiao2020}关于湍流带下游头部机制的研究，该文提到湍流带要形成下游端头所需的横流拐点不稳定性与下游头部的局部平均流的速度型相关。基于此该方法的核心思想即是通过施加一个（$x-z$平面上的）特殊构造的局部作用的体积力来诱导局部速度拐点不稳定性的产生，进而生成湍流带的下游头部。其中，体积力的表达式可根据湍流带下游端头的速度型反解而得，即通过求解偏微分方程\ref{force}而得$\boldsymbol{f}=\bm f(y)$（在$x，z$方向上均匀）。
+
+\begin{equation}\label{force}
+\begin{aligned}
+\boldsymbol{f} + \frac{1}{Re}\nabla^{2}\boldsymbol{U} = 0 ,
+\end{aligned}
+\end{equation}
+
+其中$\bm U = \bm U(y)$是由体积力$\bm f$诱导的局部速度型。Song\& Xiao等实测了下游端头的局部速度型\cite{Song2020}并通过多项式(\ref{equ:target_profile},\ref{equ:target_profile_2})拟合出了\cite{Xiao2020}在$Re = 750$下的下游头部局部速度分布，本文采用相同的局部速度型反解的体积力$\boldsymbol{f}$来诱导下游端头的生成湍流带。
+\begin{eqnarray}
+\label{equ:target_profile}
+U_x&=&-0.2478y^8 + 0.5390y^6 -0.2768y^4-0.1250y^2+0.1106,\\
+U_y&=&0, \\
+\label{equ:target_profile_2}
+U_z&=&-0.2469y^8 + 0.7262y^6 -0.8448y^4+0.3765y^2-0.0110
+\end{eqnarray}
+控制方程(\ref{equ:NS})中的$\bm F$项即是根据上述诱导方法反解得到的局部体积力$\bm f$乘以一个局部化因子再乘以幅值$A_x,A_z$进行适当的放缩后而得，目的即是模拟下游端头的局部流动，最终表达式如式(\ref{equ:final_force})。从表达形式可以看出，局部因子是以指定的局部化中心$(x_c,z_c)$为圆心通过tanh函数对圆形领域进行局部化，参数R控制局部化半径，参数B控制了局部化函数的边缘锐化度。在实际诱导湍流带生成的过程中，局部体积力$\bm F$的局部化中心还会以一定的速度在槽道中移动以模拟实际湍流带运动的下游头部。因此该移动速度也与实际头部运动速度相仿。以$3U_b/2$为速度基本单位，其中流向分量大小为0.85，展向上为0.1（或者-0.1，符号取决于湍流带预设的运动方向）\cite{Xiao2020b}。关于速度测量的更多细节可参考相关研究\cite{Paranjape2019, Xiao2020, Song2020, Xiao2020b, Liu2020}，同时可以参考\cite{Xiao2020,Xiao2020c}以了解决定湍流带运动速度大小的潜在力学机制。
+\begin{eqnarray}
+\label{equ:final_force}
+\bm F = (F_x,0,F_z) = (0.5 - 0.5tanh\frac{\sqrt{(x-x_c)^2+(z-z_c)^2}-R}{\sqrt{2}B})(A_xf_x,0,A_zf_z)
+\end{eqnarray}
+
+根据这套诱导方法，局部体积力的局部化中心从特定初始点$(x_0, z_0)$开始，以前文中给定的速度模拟下游端头在槽道中移动。当该体积力诱导生成的湍流带生长到一定大小时关闭体积力。在$Re\simeq 660$以上经诱导所生成的湍流带已经能在槽道中自持且持续生长\cite{Kanazawa2018, Tao2018, Paranjape2019}。本文中局部体积力的施加和局部化中心的运动通过Nektar++提供的自定义函数（UDF）接口实现。
+
+\section{基本流流场分析}
+考虑到在雷诺数充分大时槽道的角落处可能会产生二次流以及二次流的存在可能会干扰流动发展过程进而生成湍流影响最终结论的可靠性。根据Paranjape等人在物理实验中报告的结果\cite{Paranjape2019}，雷诺数在低于$Re\simeq 1150$时基础流动仍能保持层流状态，若高于这个值则侧壁效应有一定可能会诱发湍流生成。本研究中为避免壁面湍流的干扰，故设定雷诺数范围不大于1050。同时在实际诱导湍流带生成前，本文考察了最高雷诺数$Re = 1050$下的层流流动以分析其流动稳定性。为了缩短计算时间，本文直接以标准的抛物线速度型作为初始条件开始模拟，施加流量前文提到的定流量$Q$驱动，当流动充分发展到几乎稳定状态时（约10000个时间单位后）停止数值模拟。在无滑移边界条件的约束下，可以发现基本流与初始抛物线分布相比发生了流速重分布，且以两侧壁面附流速分布变化最明显。
+
+图\ref{fig:cornerplot}(a)展示了$Re = 1050$时，基本流动中某一侧边壁附近基本流的流向速度分量$u$在$z-y$平面上的分布，在槽道的角落处没有观察到明显的二次流动存在。图\ref{fig:cornerplot}（b）展示了流向速度$u$在槽道水平中面$y = 0$处沿展向$z$轴的速度分布，其中流向速度分量槽道中心处流速$u|_{y = 0}$十分接近于1.0(泊肃叶流动层流状态下中心最大流速)。这是由于本文中的槽道有极大的宽高比($L_z/L_y=50$)，因此在远离壁面的大部分区域几乎可以等效的看作平板泊肃叶流动。图\ref{fig:cornerplot}（c）展示了在$z = 0$时的流向速度型（虚线）与泊肃叶流的标准抛物线速度型（实线）的对比，可以看出两者十分接近且实际速度型略高于抛物线速度型。这可能是由于边壁的约束导致近壁面的流量受到了限制，为了保证截面上定流量的大小远离壁面的区域的局部流量相对更大，所表现出来的就是速度型整体高于标准抛物线。\ref{fig:cornerplot}（d）以及\ref{fig:cornerplot}（e）分别展示了在槽道中心$y = 0$和靠近壁面的$z = 49.8$处，速度分量$u,v,w$沿展向的速度分布。两幅图清楚地展示了展向和法向速度分量与流向分量相比几乎为零。以上数据表明在雷诺数$Re = 1050$槽道中基本没有二次流动（如角涡）的存在。由此可以得出结论：本章研究的雷诺数范围内无需考虑二次流对实验结果的影响。
+
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=\textwidth]{figures/RW_CCOT.jpg}
+%    \caption{C-COT的示意图~\cite{C-COT}}
+%    \label{CCOT_1}
+%\end{figure}
+
+\begin{figure}[H]
+\centerline
+	\centering
+	\subfigcapskip = -4pt
+	\begin{minipage}[h]{0.75\linewidth}
+	\centering
+	\subfigure []{\includegraphics[width=0.9\textwidth]{figures/side_wall/fig3a-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.11\linewidth}
+	\subfigure {\includegraphics[width=0.9\textwidth]{figures/side_wall/fig3aa-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.45\linewidth}
+	\subfigure {\includegraphics[width=\textwidth]{figures/side_wall/fig3/b.pdf}}
+	%figures/side_wall/fig3b-eps-converted-to.pdf
+	\centerline {(b)}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.45\linewidth}
+	\centering
+	\subfigure {\includegraphics[width=\textwidth]{figures/side_wall/fig3/c.pdf}}
+	%figures/side_wall/fig3c-eps-converted-to.pdf
+	\centerline {(c)}
+	\end{minipage}
+	\centering
+	\begin{minipage}[h]{0.45\linewidth}
+	\subfigure {\includegraphics[width=\textwidth]{figures/side_wall/fig3/d.pdf}}
+	%{figures/side_wall/fig3d-eps-converted-to.pdf}}
+	\centerline {(d)}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.45\linewidth}
+	\centering
+	\subfigure {\includegraphics[width=1\textwidth]{figures/side_wall/fig3/e.pdf}}
+	%{\includegraphics[width=1.02\textwidth]{figures/side_wall/fig3e-eps-converted-to.pdf}}
+	\centerline {(e)}
+	\end{minipage}
+	\centering
+	\caption{$Re = 1050$下基本流的可视化. (a) 流向速度分量 $u$ 在 $z-y$ 截面上的近壁面速度分布。可视化工具为Paraview (http://www.paraview.org) 。 (b) 在水平中心平面$y=0$上，流向速度沿着展向$z$轴的分布. (c) $z=0$的速度型. 为方便比较，抛物线型泊肃叶速度型以实体线标出(d)  $z\in [48,50]$内的速度分布. (e) $z = 49.8$处的速度型 }
+\label{fig:cornerplot}
+\end{figure}
+
+\section{湍流带生成}
+在获得$Re = 750$时基本稳定的基本流流场后，施加局部体积力$\bm F$于基本流流场上以诱导湍流带生成。事实上由于不可避免的数值误差的存在，仅施加局部化体积力$\bm F$导致的不稳定性已足够诱导其进一步演化成湍流带\cite{Song2020}。然而由于数值误差的量级太小，生成湍流带所需要耗费的时间可能会很长。为加速湍流带的生成，除了体积力$\bm F$外还在初始流场上施加了$\mathcal{O}(10^{-4})$量级的均匀随机噪声\cite{Song2020}。实验结果表明在本文研究的雷诺数区间内，不同雷诺数下的基本流基本上是一致的，故在后文中不同雷诺数情况下的实验都以$Re = 750$情况下生成的单个湍流带流场作为统一的初始条件，除调节雷诺数外不再施加任何外部作用。
+
+体积力局部化中心的起始点放置于其中一侧固壁附近的位置，并拖曳式\ref{equ:final_force}中的局部化中心向另一侧固壁运动。模型的展向长度$L_z = 100$，局部中心的展向速度设置为0.1。这意味着湍流带在碰到另一侧固壁壁前有将近1000个时间单位发展。过去的研究中采用同种方法仅需数百个时间单位即可生成湍流带\cite{Song2020}，因此预留给湍流带生长预设的距离应已是充分大的。
+
+在生成可以自持的湍流带后关闭局部体积力让湍流带自行发展数百个时间单位直到最终碰壁。考虑到之后湍流带充分发展所需的时间，局部体积力$\bm F$ 起始点设置在$(x_0, z_0)= (0,35)$（靠近$z=50$处的固壁），并诱导其向$z=-50$的固壁移动。图\ref{fig:turbulentband}展示了$Re = 750$时湍流带形成的基本过程，为方便表示设体积力$\bm F$开始运动的时刻为$t = 0$。$t = 320$时已经可以清楚看到局部体积力诱导生成的速度条纹；$t = 400$可以观察到湍流带的初步成型；在$t = 550$时可以看到体积力已经成功诱导生成了一个较短的湍流带，且距离壁面还有一定的距离。该过程与论文\cite{Song2020}中提到的泊肃叶流动中湍流带的生成过程一致。$t = 550$时可以观察到湍流带已具有湍流带的关键结构特征，如关于主流方向的倾角，波状的流动结构，活跃的下游端头以及一个相对消散性的上游端头等。这些关键的力学特征证明此时已成功得到单个湍流带。
+
+\begin{figure}[htb]
+\begin{minipage}[h]{0.29\linewidth}
+		\centering
+		\subfigure[t=320]{\includegraphics[width=1\textwidth]{figures/side_wall/fig4a-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.29\linewidth}
+		\centering
+		\subfigure[t=400]{\includegraphics[width=1\textwidth]{figures/side_wall/fig4b-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.29\linewidth}
+	\centering
+	\subfigure[t=550]{\includegraphics[width=1\textwidth]{figures/side_wall/fig4c-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.1\linewidth}
+	\centering
+	\subfigure{\includegraphics[width=0.85\textwidth]{figures/side_wall/fig4d-eps-converted-to.pdf}}
+	\end{minipage}
+\caption{Re = 750时，在局部体积力$\bm F$作用下的流场变化。图中展示了三个不同时刻在$y = -0.5$处$x-z$切面上的法向速度分布。主体流动方向为从左往右，图中展现的速度减去了基础流速度型。红色与蓝色分别标示了速度大小高于和低于基础流速度的区域。{\color{black}{图中黑线加粗的上下边缘代表了槽道的两侧侧壁。}}}\label{fig:turbulentband}
+\end{figure}
+
+\section{实验结果}
+\subsection{侧壁与湍流带相互作用}
+以局部体积力$Re = 750$在$t=400$时生成的单个湍流带流场作为统一的初始流场，分别研究$Re = 750,950,975,1000$情况下湍流带与固壁的碰撞过程。考虑到湍流带的展向运动速度$w \simeq 0.1$，$t = 400$时湍流带的头部距离壁面还有足够远的距离供湍流带继续运动发展。这里需要再次强调，局部体积力$\bm F$将不再作用于后续流场，湍流带仅靠自身自持机制在槽道中运动。
+
+图\ref{fig:turbulent950-1050}展示了不同雷诺数下湍流带的发展过程。在雷诺数较低时（$Re=950,975$），可以隐约看到在湍流带上游部分有新成核分裂出来的新带（图中由红色箭头标示），且新湍流带在展向上以与原带相反的方向运动。过去研究中也曾观察到过类似的现象\cite{Paranjape2019,Shimizu2019}，湍流带在雷诺数相似的情况下出现频繁的分裂、分枝。$Re=950$，成核的新湍流带在与侧壁碰撞前仍未能发展完全；$Re=975$，从图\ref{fig:turbulent950-1050}（e）中可以观察到，$t=820$时从原带分裂出来的新湍流带在碰壁前已经充分生长。在之后的图\ref{fig:turbulent950-1050}（d），\ref{fig:turbulent950-1050}（h）中可以看到，无论是新分裂出的带还是初始湍流带，它们在与侧壁碰撞后都已完全消失。基于槽道亚临界转捩的特性，在没有引入其他扰动的情况下槽道中将不会重新产生新的湍流。
+
+上述结果表明低雷诺数下下游端头与壁面碰撞后会完全消失，且下游端头消失后湍流带剩余的主体部分也会逐渐消散最终消失，这从侧面印证了湍流带的下游端头在整体的湍流生成机制中扮演了重要的角色。这种碰撞后消散的现象与湍流带间碰撞后消散的现象十分相似\cite{Shimizu2019,Song2020}，具体来说低雷诺数下下游端头在由于带间碰撞消失后，剩余的湍流带主体失去关键的头部机制后无法继续自持并最终消散。由此可以得出一个初步的结论：在雷诺数$Re=975$及以下的情况湍流带自持的机制是相同的（$Re=750$时，湍流带在与固壁碰撞后也同样消失）。
+
+当雷诺数较高时（$Re = 1000,1050$）可以清楚看到初始的单个湍流带快速分裂出了一个新的湍流带且新湍流带与原湍流带在碰壁前都已发展成熟（图\ref{fig:turbulent950-1050}(i)(j),(m)(n))）。高雷诺数情况下，湍流带下游端头也与壁面碰撞后同样快速消失。但与低雷诺数下的情况不同，高雷诺数下湍流带的剩余主体部分在下游端头消失后仍能在槽道内存在相当长的时间直到模拟结束（Re = 1000时接近2700个时间单位；Re = 1050时接近3800个时间单位）。残余湍流带既没有消失也没有布满整个槽道，而是通过分裂扩散最终形成了一种层流湍流区域交织的网状结构，在其它关于湍流带相互作用的研究\cite{Paranjape2019, Shimizu2019, Duguet2020}中也有提到相同的现象。值得注意的是在发展成网状湍流结构后，远离侧壁部分的残留湍流并没有产生新的下游端头，一般认为这是由于网状湍流区域之间没有足够的层流区域以发展出关键的下游端头\cite{Shimizu2019}。$Re = 1000,1050$下的实验结果表明，在雷诺数足够高的情况下湍流带下游端头在与侧壁相互作用消失后，剩余的湍流带仍能在槽道中局部自持。
+
+\begin{figure}[p]
+	\subfigbottomskip = 10pt
+	%\subfigcapskip=-5pt
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[Re=950 t=700]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5a-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=940]{\includegraphics[width = 1\textwidth]{figures/side_wall/fig5b-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=1360]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5c-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=1840]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5d-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[Re=975 t=700]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5e-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=820]{\includegraphics[width = 1\textwidth]{figures/side_wall/fig5f-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=1104]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5g-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=2545]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5h-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[Re=1000 t=700]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5i-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=820]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5j-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=1600]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5k-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=3490]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5l-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[]{0.22\linewidth}
+	\subfigure[Re=1050 t=670]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5m-eps-converted-to.pdf}}%这里不调宽一点备注会跨行
+	\centering
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=760]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5n-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=1300]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5o-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=4502]{\includegraphics[width = 0.995\textwidth]{figures/side_wall/fig5p-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{1\linewidth}
+	\centering
+	\subfigure{\includegraphics[width = 0.5\textwidth]{figures/side_wall/fig5q-eps-converted-to.pdf}}
+	\end{minipage}
+	\caption{不同雷诺数下湍流带与侧壁碰撞过程，分别为Re = 950 (a-d), 975 (e-h), 1000 (i-l) 以及 1050 (m-p)。图中绘制的是法向速度的速度分布。 {\color{black}{红色箭头标注的是原湍流带分裂出的成核湍流带}}.}
+	\label{fig:turbulent950-1050}
+\end{figure}
+
+值得注意的是，关于在高雷诺数下观察到的湍流带碰撞后仍能自持的现象，我们需要考虑另外一种可能的情况：湍流带在完全消失的过程中，残余湍流带的存在重新诱发了新湍流的产生。即所观察到的存活的湍流带可能并不是一开始生成的湍流带，而是高雷诺数下由于其它因素诱导重新生成的。为了验证这种可能性，本文在$z = -50$的侧壁附近$(x,z) = (90,-40)$处安置了检测点以监测法向速度随时间的变化。对于$Re=1000$的监测数据，可以看到法向速度在$t = 2200\sim2700$没有出现明显的波峰突变（相较于其它时间段），这表明湍流带可能没有保持带状结构而是暂时形成了扩散型的湍流区域。尽管如此由于后续的监控数据表明法向速度变化仍持续存在，可以推得原始的湍流带并没有中途消失。在$t = 2800$之后（此时湍流带头部已由于碰撞消失），监测数据表明残留的湍流带几乎周期性的通过监测点，相邻的两次通过之间的时间间隔均约为150个时间单位。这表明剩余的湍流带主体在流向上以大约0.67的速度在槽道中移动，十分接近于\cite{Xiao2020b}实测得到的湍流带主体流向运动速度（$Re = 950$时约为0.65；$Re = 1050$时约为0.63）。在$Re = 1050$时可以观察到在$t = 2000\sim4500$的整个监测时间窗口内，一直存在周期性通过的湍流，且通过周期接近于$Re = 1000$的间隔。这表明此时在侧壁附近也存在能自持的湍流斑块且以相似恒定的速度沿着流向运动。需要注意的是，流动现象的具体演化过程依赖于初始状态，图中测得的数据可能不具有一般性。综上所述，侧壁附近的流速变化数据的周期性充分证明了在雷诺数高于$Re\simeq 1000$时，湍流带在与固壁碰撞后仍能继续存活（至少数千个时间单位）没有中途消失。
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width = 0.8\textwidth]{figures/side_wall/fig6-eps-converted-to.pdf}
+\caption{\label{fig:monitor_point}  $z=-50$的侧壁附近处定点的法向速度分量变化监测数据。定点的流向位置为$x=90$，展向位置$z=-40$。该数据是为了表现侧壁附近湍流带的通过情况，以证明仅有单个湍流带通过。}
+\end{figure}
+
+综合以上高低雷诺数下的实验结果可以给出以下结论：在各雷诺数下湍流带与侧壁碰撞后下游端头都会消失。且存在一个临界雷诺数$Re_cr$，当$Re < R_cr$时，湍流带的主体在头部消失后无法自持并会在演化一段时间后会最终消散；当$Re > R_cr$时，湍流带的主体在头部消失后仍能自持，且会在槽道中最终演化出网状的湍流结构。由实验结果可以确定该临界值$R_{cr} \in (975,1000)$。
+
+\subsection{下游端头消失机制}
+上一节的实验结果中表明，在本文研究的雷诺数区间内湍流带下游端头与侧壁碰撞后都会最终消失。前文多次提到湍流带的下游端头对整个湍流带的自持起到关键性作用，为了进一步探讨侧壁效应具体是如何影响下游端头的自持机制，本文考察了雷诺数分别在高于与低于临界值情况下，湍流带与侧壁碰撞的详细过程。
+
+图（\ref{fig:750-1050-wall}）分别展示了$Re = 750$和$Re = 1050$下湍流带与固壁碰撞法向速度变化的详细过程。在$Re = 750$时，下游端头的头部倾角以及波状结构（涡流以及速度条纹）的复杂度明显减小。$Re = 750$泊肃叶流中的湍流带头部条纹倾角约为$38^\circ$\cite{Xiao2020}。子图（a）展示了在接近侧壁时，湍流带的倾角经测量约为$24^\circ$，子图（b）中头部角度降至$21^\circ$，两者皆低于在泊肃叶流动中测量得的湍流带倾角。在子图（c），（d）中湍流带头部与侧壁发生碰撞，头部条纹倾角骤降了接近$10^\circ$，几乎与流向方向一致。在$Re = 1050$时，可以看到湍流带靠近侧壁时头部倾角约为$53^\circ$（图（e）），远高于$Re = 750$时的倾角，这表明高雷诺数下头部不稳定性更强；与壁面碰撞后虽然同样能观察到条纹倾角的减小（$43^\circ$），但是剩余条纹的角度仍明显大于低雷诺数下的角度。
+
+另外一个值得注意的差异点：$Re = 750$时下游端头与侧壁碰撞后，条纹倾角减小的现象不仅只出现在碰撞区域，在湍流带的主体部分也观察到了这种现象。主体部分条纹倾角减小的同时还可以观察到湍流带内部湍流的复杂度也在减小（如图（c），（d）所示）。这表明在活跃的下游端头消失后，湍流带内部的湍流结构无法自我维持，从而导致条纹倾角减小以及湍流强度减弱，使得湍流带最终消散。与之相比在$Re = 1050$时，主体的湍流强度和复杂度在下游头部消失后没有发生明显的变化，包括靠近侧壁的部分。这些差异进一步表明湍流带在低雷诺数下要想自持，一个活跃的下游端头是必不可少的；而在高雷诺数下，湍流带仅靠自身的机制即可局部自持。
+
+\begin{figure}
+	\subfigbottomskip = 2pt
+	%\subfigcapskip=-5pt
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[Re=750 t=780.5]{\includegraphics[width = 1\textwidth]{figures/side_wall/fig7a-eps-converted-to.pdf}}
+%	\subfigure[Re=750 t=780.5]{\includegraphics[width = 1\textwidth]{figures/side_wall/bandwall/band750-106-angle.eps}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=825.5] {\includegraphics[width = 1\textwidth]{figures/side_wall/fig7b-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=870.5] {\includegraphics[width = 1\textwidth]{figures/side_wall/fig7c-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.22\linewidth}	
+	\centering
+	\subfigure[t=900.5] {\includegraphics[width = 1\textwidth]{figures/side_wall/fig7d-eps-converted-to.pdf}}
+	\end{minipage}
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[Re=1050 t=700]{\includegraphics[width = 1\textwidth]{figures/side_wall/fig7e-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=745] {\includegraphics[width = 1\textwidth]{figures/side_wall/fig7f-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.22\linewidth}
+	\centering
+	\subfigure[t=790] {\includegraphics[width = 1\textwidth]{figures/side_wall/fig7g-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{0.22\linewidth}	
+	\centering
+	\subfigure[t=835] {\includegraphics[width = 1\textwidth]{figures/side_wall/fig7h-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\begin{minipage}[h]{1\linewidth}
+	\centering
+	\subfigure{\includegraphics[width = 0.5\textwidth]{figures/side_wall/fig7i-eps-converted-to.pdf}}
+	\end{minipage}
+	\quad
+	\caption{在雷诺数Re = 750 (a-d) and Re = 1050 (e-h)下湍流带碰壁的详细过程。图中标示出了下游端头部速度条纹的大致倾角。}
+\label{fig:750-1050-wall}
+\end{figure}
+
+\subsection{湍流带消散机制分析}
+在雷诺数相对较低时（如$Re=750$），下游端头在与侧壁还有一段距离时就会受到侧壁效应的影响，出现角度减小和流动结构的湍流度下降等现象。流动结构在只有粘性效应的影响下湍流度的衰减过程会很慢。同时，这种影响有从端头向湍流带主体扩散的趋势，最终导致整个湍流带的消散。
+
+这里为了能更定量化的展现头部条纹倾角和不稳定性的关系。本文泊肃叶流动中根据式\ref{equ:target_profile}，\ref{equ:target_profile_2}重构了头部的速度型，适当放缩其中一个速度分量并展现最不稳定波对应的倾角和不稳定性的变化情况，关于模态不稳定性的分析可以参考文献\cite{Xiao2020}。通过控制变量分别对流向分量$U_x$和展向分量$U_z$进行了放缩，表\ref{tab:stability}给出了改变分量后相应的角度变化以及最不稳定波的增长率。可以看到不稳定性大小与倾角大小呈正相关关系。此外可以看到，将流向分量$U_x$在增幅至1.8倍或缩减至0.8倍对不稳定性增长率和倾角大小的影响并不明显；而以同样的倍率放缩展向分量$U_z$却能发现增长率和倾角出现明显的变化。上述数值结果表明，在下游端头的局部平均流动中，展向速度型的变化对局部不稳定性起到主导作用。虽然在下游端头的实际流动远复杂于简化后的流动$\bm U$，但相应的分析某种程度上定量化展现了各速度分量是如何影响局部不稳定性和流动模式的。另外需要指出的是，放缩因子0.8和1.3是随机挑选的，目的仅是为了比较流向分量和展向分量在线性不稳定性中的重要程度。
+
+以上放缩实验结果表明，头部条纹倾角减小现象可以合理地对应到头部不稳定性的下降，角度减小时湍流复杂度的下降也侧面佐证了这一对应。一般认为只有非线性足够强才能产生不同时空尺度的高复杂度的湍流，结合靠近壁面过程中条纹倾角骤降的现象，可以合理地推断碰撞过程中湍流带头部局部速度型的非线性不稳定性由于外部因素影响而减小。不稳定性的降低一个可能的原因是侧壁的抑制效应影响了下游端头的局部速度型进而影响了局部速度不稳定性。图\ref{fig:cornerplot}(d)中展示的速度型表明，流向流速仅在壁面附近很狭小的区域受到影响。考虑到其区域范围远小于不稳定波的波长\cite{Xiao2020,Song2020}，基本可以排除侧壁作用主要影响的是流向速度分布。表\ref{tab:stability}的结果说明倾角关于展向速度型更加敏感。综上可以合理推测：头部不稳定性的减小是由于湍流带在足够接近侧壁时，展向速度型由于侧壁的抑制效应受到影响而导致的。在\cite{Xiao2020,Song2020}中也说明局部流动的展向速度型被证明在湍流生成和局部不稳定性中扮演了重要的角色，进一步佐证了该推论。
+
+当雷诺数高于临界值时（$Re = 1050$），可以观察到同样的现象（倾角减小、湍流度降低），但侧壁效应对湍流带的残余部分影响较小，剩余的湍流带主体在失去头部后仍能自持。换句话来说，高雷诺数下湍流带的自持并不依赖于下游端头的局部不稳定性。
+
+
+\begin{table}
+\centering
+\begin{tabular}{c|c|c|c|c}
+\hline
+profiles & $\alpha$ & $\beta$ & $\gamma$ & tilt angle \\
+\hline
+$(U_x+1-y^2, U_y, U_z)$  & 0.31 & -1.96 & 0.0188 & $9.0^\circ$ \\
+$(1.3U_x+1-y^2, U_y, U_z)$  & 0.31 & -1.94 & 0.0192 & $9.1^\circ$ \\
+$(U_x+1-y^2, U_y, 1.3U_z)$  & 0.37 & -1.96 & 0.0298 & $10.7^\circ$ \\
+$(0.8U_x+1-y^2, U_y, U_z)$  & 0.31 & -1.94 & 0.0185 & $9.1^\circ$ \\
+$(U_x+1-y^2, U_y, 0.8U_z)$  & 0.27 & -1.94 & 0.0114 & $7.9^\circ$ \\
+\hline
+\end{tabular}
+\caption{\label{tab:stability} 流向速度分量$U_x$和展向速度分量$U_z$分别对局部线性不稳定性的影响，以及相对于基础流($U_x+1-y^2, U_y, U_z$)对应的最不稳定波的倾角变化，$U_x$, $U_y$和$U_z$通过式(\ref{equ:target_profile}$-$\ref{equ:target_profile_2})求得。需要注意的是实验中分析线性不稳定性时流向速度为$U_x$加上标准抛物线速度型$1-y^2$，这是因为式\ref{equ:target_profile}中求解得的速度为相对于标准速度型的偏移量\cite{Song2020}。$\alpha$ 和 $\beta$分别代表流向和展向上的波数，$\gamma$为最不稳定波的指数增长率。{\color{black}{指数增长率通过特征值分析计算得出, 参考 \cite{Xiao2020}。最不稳定波相对流向的倾角通过关系 $\arctan{|\alpha/\beta|}$得出。}}}
+\end{table}
+
+\section{小结}
+	本章基于高精度谱元法软件模拟了不同雷诺数下单个湍流带碰壁的过程。通过比较两组低雷诺数与两组高雷诺数下湍流带碰壁后的演化过程，可以得出以下两个结论：
+
+	1、湍流带在与边壁碰撞后，在所有雷诺数下游头部均会消失，而剩余湍流带并不都会最终消失。存在一个临界雷诺数，当雷诺数高于临界值时，湍流带与边壁碰撞后剩余主体仍然能在槽道中持续存在；反之剩余湍流带主体无法自持并会最终消失。临界值所处区间$Re_{cr} \in [975,1000]$.
+
+	2、湍流带头部的条纹在靠近边壁时条纹角度会大幅度的减小，且能观察到条纹复杂度的降低。鉴于此本文另外构造了泊肃叶流动下湍流带头部的流动模型以研究侧壁影响头部的机制。通过控制变量法分析，发现湍流带最不稳定波的角度（等价于湍流带头部条纹角度）与不稳定性指数增长率对于展向流速分量的变化更加敏感。根据侧壁附近基本流的速度分布图，可以发现侧壁的无滑移边界条件对其附近的流动有很强的抑制作用。故由此可推断得：侧壁主要是通过抑制影响头部局部流动的展向流速速度型进而影响头部流动的不稳定性。表现出来的现象就是湍流带条纹角度的减小以及内部湍流度降低。故可推断得：侧壁效应通过影响（或许是抑制）展向局部速度型从而影响头部的不稳定性，进而导致湍流带头部的消失。低雷诺数下，失去头部的湍流带无法继续生成速度条纹和湍流，剩余湍流带部分最终消散；而在高于临界值的雷诺数下，由于剩余湍流部分的自持并不依赖于头部的不稳定性，因此能持续存在。
